@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "HealthKitController.h"
 @interface ViewController ()
 
 @end
@@ -23,5 +23,12 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (IBAction)addGluco:(id)sender {
+    [[HealthKitController sharedInstance] requestHKPermission];
+    [[HealthKitController sharedInstance] saveGlucoseLevelsWithFloat:105.5];
+}
+
+
 
 @end

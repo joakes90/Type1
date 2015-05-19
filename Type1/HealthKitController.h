@@ -15,6 +15,14 @@
 
 + (instancetype) sharedInstance;
 
+-(void) requestHKPermission;
+
 -(void)saveGlucoseLevelsWithFloat:(float)number;
+
+-(void)saveGramsOfFatWithFloat:(float)number;
+
+-(void)saveGramsOfProteinWithFloat:(float)number;
+
+-(void)saveGramsOfCarbsWithFloat:(float)number;
 
 @end
