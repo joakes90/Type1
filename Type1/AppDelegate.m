@@ -7,8 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "HealthKitController.h"
 
 @interface AppDelegate ()
+
 
 @end
 
@@ -17,6 +19,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [[HealthKitController sharedInstance] saveGlucoseLevelsWithFloat:25.5];
+    
     return YES;
 }
 

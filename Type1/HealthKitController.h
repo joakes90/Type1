@@ -11,4 +11,10 @@
 
 @interface HealthKitController : NSObject
 
+@property (strong, nonatomic, readonly) HKHealthStore *HealthStore;
+
++ (instancetype) sharedInstance;
+
+-(void)saveGlucoseLevelsWithFloat:(float)number;
+
 @end
