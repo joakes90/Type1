@@ -15,6 +15,8 @@
 		D04A329D1B0A9B4E00933B2E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D04A329C1B0A9B4E00933B2E /* Images.xcassets */; };
 		D04A32A01B0A9B4E00933B2E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D04A329E1B0A9B4E00933B2E /* LaunchScreen.xib */; };
 		D04A32AC1B0A9B4E00933B2E /* Type1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = D04A32AB1B0A9B4E00933B2E /* Type1Tests.m */; };
+		D04A32B81B0AA09300933B2E /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04A32B71B0AA09300933B2E /* HealthKit.framework */; };
+		D04A32BB1B0AA0D800933B2E /* HealthKitController.m in Sources */ = {isa = PBXBuildFile; fileRef = D04A32BA1B0AA0D800933B2E /* HealthKitController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,10 @@
 		D04A32A51B0A9B4E00933B2E /* Type1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Type1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D04A32AA1B0A9B4E00933B2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D04A32AB1B0A9B4E00933B2E /* Type1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Type1Tests.m; sourceTree = "<group>"; };
+		D04A32B61B0AA09300933B2E /* Type1.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Type1.entitlements; sourceTree = "<group>"; };
+		D04A32B71B0AA09300933B2E /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		D04A32B91B0AA0D800933B2E /* HealthKitController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthKitController.h; sourceTree = "<group>"; };
+		D04A32BA1B0AA0D800933B2E /* HealthKitController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthKitController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D04A32B81B0AA09300933B2E /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +72,7 @@
 		D04A32801B0A9B4D00933B2E = {
 			isa = PBXGroup;
 			children = (
+				D04A32B71B0AA09300933B2E /* HealthKit.framework */,
 				D04A328B1B0A9B4D00933B2E /* Type1 */,
 				D04A32A81B0A9B4E00933B2E /* Type1Tests */,
 				D04A328A1B0A9B4D00933B2E /* Products */,
@@ -83,6 +91,8 @@
 		D04A328B1B0A9B4D00933B2E /* Type1 */ = {
 			isa = PBXGroup;
 			children = (
+				D04A32B61B0AA09300933B2E /* Type1.entitlements */,
+				D04A32B51B0A9FDF00933B2E /* Model Objects */,
 				D04A32901B0A9B4E00933B2E /* AppDelegate.h */,
 				D04A32911B0A9B4E00933B2E /* AppDelegate.m */,
 				D04A32961B0A9B4E00933B2E /* ViewController.h */,
@@ -120,6 +130,15 @@
 				D04A32AA1B0A9B4E00933B2E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D04A32B51B0A9FDF00933B2E /* Model Objects */ = {
+			isa = PBXGroup;
+			children = (
+				D04A32B91B0AA0D800933B2E /* HealthKitController.h */,
+				D04A32BA1B0AA0D800933B2E /* HealthKitController.m */,
+			);
+			name = "Model Objects";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +190,12 @@
 				TargetAttributes = {
 					D04A32881B0A9B4D00933B2E = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = C2NSPAKWYK;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 					D04A32A41B0A9B4E00933B2E = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -226,6 +251,7 @@
 				D04A328F1B0A9B4E00933B2E /* main.m in Sources */,
 				D04A32981B0A9B4E00933B2E /* ViewController.m in Sources */,
 				D04A32951B0A9B4E00933B2E /* Type1.xcdatamodeld in Sources */,
+				D04A32BB1B0AA0D800933B2E /* HealthKitController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,9 +377,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Type1/Type1.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Type1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -361,9 +391,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Type1/Type1.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Type1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
