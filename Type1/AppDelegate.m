@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 
+#import "Stack.h"
+#import "Injection.h"
+
 @interface AppDelegate ()
 
 
@@ -18,7 +21,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
+    NSArray *testArray = [self entry];
+    Injection *injection = testArray[0];
+    NSLog(@"%@ %@", injection.units, injection.time);
     
     return YES;
 }
@@ -44,6 +49,11 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     // Saves changes in the application's managed object context before the application terminates.
+}
+
+-(NSArray *) entry {
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Injection"];
+    return [[Stack sharedInstance].managedObjectContext executeFetchRequest:fetchRequest error:nil];
 }
 
 

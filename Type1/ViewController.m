@@ -25,8 +25,7 @@
 }
 
 - (IBAction)addGluco:(id)sender {
-    [[HealthKitController sharedInstance] requestHKPermission];
-    [[HealthKitController sharedInstance] saveGlucoseLevelsWithFloat:105.5];
+    [[HealthKitController sharedInstance] saveUnitsOfInsulinInjected:5.5 andType:@"Type 1"];
 }
 
 

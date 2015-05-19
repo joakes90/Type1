@@ -7,6 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Stack.h"
+#import "Injection.h"
+
 @import HealthKit;
 
 @interface HealthKitController : NSObject
@@ -24,5 +27,7 @@
 -(void)saveGramsOfProteinWithFloat:(float)number;
 
 -(void)saveGramsOfCarbsWithFloat:(float)number;
+
+-(void)saveUnitsOfInsulinInjected:(float)number andType:(NSString *)kind;
 
 @end

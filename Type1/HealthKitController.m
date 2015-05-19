@@ -101,4 +101,13 @@
 }
 
 
+
+-(void)saveUnitsOfInsulinInjected:(float)number andType:(NSString *)kind {
+    Injection *injection = [NSEntityDescription insertNewObjectForEntityForName:@"Injection" inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
+    injection.units = [NSNumber numberWithFloat:number];
+    injection.time = [NSDate new];
+    injection.type = kind;
+    
+    [[Stack sharedInstance].managedObjectContext save:nil];
+}
 @end
