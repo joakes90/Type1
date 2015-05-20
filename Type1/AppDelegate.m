@@ -10,6 +10,9 @@
 
 #import "Stack.h"
 #import "Injection.h"
+#import "HealthKitController.h"
+
+@import HealthKit;
 
 @interface AppDelegate ()
 
