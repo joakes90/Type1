@@ -12,6 +12,14 @@
 
 @property (strong, nonatomic) HKHealthStore *HealthStore;
 
+@property (strong, nonatomic) NSArray *GlucoseStats;
+
+@property (strong, nonatomic) NSArray *FatStats;
+
+@property (strong, nonatomic) NSArray *ProteinStats;
+
+@property (strong, nonatomic) NSArray *CarbStats;
+
 @end
 
 @implementation HealthKitController
@@ -27,7 +35,9 @@
     return sharedInstance;
 }
 
--(void) requestHKPermission {
+-(BOOL) requestHKPermission {
+    if ([HKHealthStore isHealthDataAvailable]) {
+    
     NSSet *typesToUse = [NSSet setWithArray:@[[HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierBloodGlucose],
                                               [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierDietaryFatTotal],
                                               [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierDietaryProtein],
@@ -37,8 +47,11 @@
     [_HealthStore requestAuthorizationToShareTypes:typesToUse readTypes:typesToUse completion:^(BOOL success, NSError *error) {
         
     }];
+        return YES;
+    } else {
+        return NO;
+    }
 }
-
 
 -(void)saveGlucoseLevelsWithFloat:(float)number{
     HKUnit *mg = [HKUnit gramUnitWithMetricPrefix:HKMetricPrefixMilli];
@@ -109,5 +122,150 @@
     injection.type = kind;
     
     [[Stack sharedInstance].managedObjectContext save:nil];
+}
+
+-(void)GlucoseStatsQuereyforNumberofWeeks:(int)weeks {
+    
+    HKQuantityType *glucoseType = [HKQuantityType quantityTypeForIdentifier:HKQuantityTypeIdentifierBloodGlucose];
+    NSDate *anchorDate = [NSDate dateWithTimeIntervalSinceNow:-86400 * (weeks * 7)];
+    NSDateComponents *days = [[NSDateComponents alloc] init];
+    days.day = 1;
+    
+    HKStatisticsCollectionQuery *glucoseQuery = [[HKStatisticsCollectionQuery alloc] initWithQuantityType:glucoseType
+                                                                                  quantitySamplePredicate:nil
+                                                                                                  options:HKStatisticsOptionDiscreteAverage
+                                                                                               anchorDate:anchorDate
+                                                                                       intervalComponents:days];
+    
+    glucoseQuery.initialResultsHandler = ^(HKStatisticsCollectionQuery *query, HKStatisticsCollection *results, NSError *error) {
+        if (error) {
+            NSLog(@"Error occured");
+            abort();
+        } else {
+            NSMutableArray *resultsArray = [[NSMutableArray alloc] init];
+            
+            [results enumerateStatisticsFromDate:anchorDate toDate:[NSDate new] withBlock:^(HKStatistics *result, BOOL *stop) {
+                [resultsArray addObject:result];
+            }];
+            
+            [resultsArray removeObjectAtIndex:resultsArray.count - 1];
+            self.GlucoseStats = resultsArray;
+            
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"glucoseReport" object:nil];
+        }};
+    
+    
+    [_HealthStore executeQuery:glucoseQuery];
+    
+}
+
+-(void)fatStatusQuereyforNumberOfWeeks:(int)weeks {
+    
+    HKQuantityType *fatType = [HKQuantityType quantityTypeForIdentifier:HKQuantityTypeIdentifierDietaryFatTotal];
+    NSDate *anchorDate =[NSDate dateWithTimeIntervalSinceNow:-86400 * (weeks * 7)];
+    NSDateComponents *days = [[NSDateComponents alloc] init];
+    days.day = 1;
+    
+    HKStatisticsCollectionQuery *fatQuerey =[[HKStatisticsCollectionQuery alloc] initWithQuantityType:fatType
+                                                                              quantitySamplePredicate:nil
+                                                                                              options:HKStatisticsOptionCumulativeSum
+                                                                                           anchorDate:anchorDate
+                                                                                   intervalComponents:days];
+    
+    fatQuerey.initialResultsHandler = ^(HKStatisticsCollectionQuery *query, HKStatisticsCollection *results, NSError *error) {
+        if (error) {
+            NSLog(@"Error occured");
+            abort();
+        } else {
+            NSMutableArray *resultsArray = [[NSMutableArray alloc] init];
+            
+            [results enumerateStatisticsFromDate:anchorDate toDate:[NSDate new] withBlock:^(HKStatistics *result, BOOL *stop) {
+                [resultsArray addObject:result];
+            }];
+            [resultsArray removeObjectAtIndex:resultsArray.count -1];
+            self.FatStats = resultsArray;
+            
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"fatReport" object:nil];
+        }};
+    
+    [_HealthStore executeQuery:fatQuerey];
+}
+
+-(void)proteinStatusQuereyforNumberOfWeeks:(int)weeks {
+    
+    HKQuantityType *proteinType = [HKQuantityType quantityTypeForIdentifier:HKQuantityTypeIdentifierDietaryProtein];
+    NSDate *anchorDate = [NSDate dateWithTimeIntervalSinceNow:-86400 * (weeks * 7)];
+    NSDateComponents *days = [[NSDateComponents alloc] init];
+    days.day = 1;
+    
+    HKStatisticsCollectionQuery *proteinQuerey = [[HKStatisticsCollectionQuery alloc] initWithQuantityType:proteinType
+                                                                                   quantitySamplePredicate:nil
+                                                                                                   options:HKStatisticsOptionCumulativeSum
+                                                                                                anchorDate:anchorDate
+                                                                                        intervalComponents:days];
+    
+    proteinQuerey.initialResultsHandler = ^(HKStatisticsCollectionQuery *query, HKStatisticsCollection *results, NSError *error) {
+        if (error) {
+            NSLog(@"Error occured");
+            abort();
+        } else {
+            NSMutableArray *resultsArray = [[NSMutableArray alloc] init];
+            
+            [results enumerateStatisticsFromDate:anchorDate toDate:[NSDate new] withBlock:^(HKStatistics *result, BOOL *stop) {
+                [resultsArray addObject:result];
+            }];
+            [resultsArray removeObjectAtIndex:resultsArray.count -1];
+            self.ProteinStats = resultsArray;
+            
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"proteinReport" object:nil];
+        }};
+    [_HealthStore executeQuery:proteinQuerey];
+}
+
+-(void)carbStatusQuereyforNumberOfWeeks:(int)weeks {
+    HKQuantityType *carbType = [HKQuantityType quantityTypeForIdentifier:HKQuantityTypeIdentifierDietaryCarbohydrates];
+    NSDate *anchorDate = [NSDate dateWithTimeIntervalSinceNow:-86400 * (weeks * 7)];
+    NSDateComponents *days = [[NSDateComponents alloc] init];
+    days.day = 1;
+    
+    HKStatisticsCollectionQuery *carbsQuerey = [[HKStatisticsCollectionQuery alloc] initWithQuantityType:carbType
+                                                                                 quantitySamplePredicate:nil
+                                                                                                 options:HKStatisticsOptionCumulativeSum
+                                                                                              anchorDate:anchorDate
+                                                                                      intervalComponents:days];
+    carbsQuerey.initialResultsHandler = ^(HKStatisticsCollectionQuery *query, HKStatisticsCollection *results, NSError *error) {
+        if (error) {
+            NSLog(@"Error occured");
+            abort();
+        } else {
+            NSMutableArray *resultsArray = [[NSMutableArray alloc] init];
+            
+            [results enumerateStatisticsFromDate:anchorDate toDate:[NSDate new] withBlock:^(HKStatistics *result, BOOL *stop) {
+                [resultsArray addObject:result];
+            }];
+            [resultsArray removeObjectAtIndex:resultsArray.count - 1];
+            self.CarbStats = resultsArray;
+            
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"carbReport" object:nil];
+        }};
+    [_HealthStore executeQuery:carbsQuerey];
+}
+
+
+
+-(NSArray *) grabGlucose {
+    return self.GlucoseStats;
+}
+
+-(NSArray *) grabFat {
+    return self.FatStats;
+}
+
+-(NSArray *)grabProtein {
+    return self.ProteinStats;
+}
+
+-(NSArray *)grabCarbs {
+    return self.CarbStats;
 }
 @end

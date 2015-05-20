@@ -18,7 +18,9 @@
 
 + (instancetype) sharedInstance;
 
--(void) requestHKPermission;
+-(BOOL) requestHKPermission;
+
+// SAVE DATA METHODS
 
 -(void)saveGlucoseLevelsWithFloat:(float)number;
 
@@ -29,5 +31,25 @@
 -(void)saveGramsOfCarbsWithFloat:(float)number;
 
 -(void)saveUnitsOfInsulinInjected:(float)number andType:(NSString *)kind;
+
+//GENERATE NSARRAYS OF HKSTATISTICS FOR WEEKS SPLIT BY DAYS
+
+-(void)GlucoseStatsQuereyforNumberofWeeks:(int)weeks;
+
+-(void)fatStatusQuereyforNumberOfWeeks:(int)weeks;
+
+-(void)proteinStatusQuereyforNumberOfWeeks:(int)weeks;
+
+-(void)carbStatusQuereyforNumberOfWeeks:(int)weeks;
+
+//RETREAVE GENERATED NSARRAYS
+
+-(NSArray *) grabGlucose;
+
+-(NSArray *) grabFat;
+
+-(NSArray *)grabProtein;
+
+-(NSArray *)grabCarbs;
 
 @end

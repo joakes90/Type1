@@ -10,6 +10,9 @@
 
 #import "Stack.h"
 #import "Injection.h"
+#import "HealthKitController.h"
+
+@import HealthKit;
 
 @interface AppDelegate ()
 
@@ -23,7 +26,11 @@
     // Override point for customization after application launch.
     NSArray *testArray = [self entry];
     Injection *injection = testArray[0];
-    NSLog(@"%@ %@", injection.units, injection.time);
+    NSLog(@"%@ %@ \n \n", injection.units, injection.time);
+    
+    [[HealthKitController sharedInstance] GlucoseStatsQuereyforNumberofWeeks:2];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(glucoseTest) name:@"glucoseReport" object:nil];
     
     return YES;
 }
@@ -54,6 +61,12 @@
 -(NSArray *) entry {
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Injection"];
     return [[Stack sharedInstance].managedObjectContext executeFetchRequest:fetchRequest error:nil];
+}
+
+-(void)glucoseTest{
+    NSArray *stat = [[HealthKitController sharedInstance] grabGlucose];
+    
+    NSLog(@"%@", stat );
 }
 
 
