@@ -21,10 +21,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    NSArray *testArray = [self entry];
-    Injection *injection = testArray[0];
-    NSLog(@"%@ %@", injection.units, injection.time);
-    
+
     return YES;
 }
 
@@ -51,10 +48,6 @@
     // Saves changes in the application's managed object context before the application terminates.
 }
 
--(NSArray *) entry {
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Injection"];
-    return [[Stack sharedInstance].managedObjectContext executeFetchRequest:fetchRequest error:nil];
-}
 
 
 @end
