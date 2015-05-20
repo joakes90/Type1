@@ -251,6 +251,24 @@
     [_HealthStore executeQuery:carbsQuerey];
 }
 
+-(NSArray *)numberOfinjectionsperDayforNumberOfWeeks:(int)weeks {
+    NSDate *startDate = [NSDate dateWithTimeIntervalSinceNow:-86400 * (weeks * 7)];
+    
+    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Injection"];
+    NSArray *allInjections = [[Stack sharedInstance].managedObjectContext executeFetchRequest:request error:nil];
+    NSMutableArray *injectionsinRange = [[NSMutableArray alloc] init];
+    
+    for (Injection *i in allInjections) {
+        NSDate *laterDate = [startDate laterDate:i.time];
+        BOOL isInRange = [laterDate isEqual:i.time];
+        
+        if (isInRange) {
+            [injectionsinRange addObject:i];
+        }
+    }
+    return injectionsinRange;
+}
+
 
 
 -(NSArray *) grabGlucose {

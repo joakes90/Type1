@@ -42,6 +42,8 @@
 
 -(void)carbStatusQuereyforNumberOfWeeks:(int)weeks;
 
+-(NSArray *)numberOfinjectionsperDayforNumberOfWeeks:(int)weeks;
+
 //RETREAVE GENERATED NSARRAYS
 
 -(NSArray *) grabGlucose;

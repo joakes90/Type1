@@ -24,13 +24,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    NSArray *testArray = [self entry];
-    Injection *injection = testArray[0];
-    NSLog(@"%@ %@ \n \n", injection.units, injection.time);
+//    NSArray *testArray = [self entry];
+//    Injection *injection = testArray[0];
+//    NSLog(@"%@ %@ \n \n", injection.units, injection.time);
     
     [[HealthKitController sharedInstance] GlucoseStatsQuereyforNumberofWeeks:2];
+    NSLog(@"%@", [[HealthKitController sharedInstance] numberOfinjectionsperDayforNumberOfWeeks:2]);
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(glucoseTest) name:@"glucoseReport" object:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(glucoseTest) name:@"glucoseReport" object:nil];
     
     return YES;
 }
