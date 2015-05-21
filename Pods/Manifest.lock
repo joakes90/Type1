@@ -1,0 +1,10 @@
+PODS:
+  - iOSPlot (1.0.1)
+
+DEPENDENCIES:
+  - iOSPlot
+
+SPEC CHECKSUMS:
+  iOSPlot: b68b565b1f625f1e43badfaebea58cc8fa4ec6b7
+
+COCOAPODS: 0.37.1

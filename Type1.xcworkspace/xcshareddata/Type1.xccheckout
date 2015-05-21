@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>98E8260A-C386-4855-B0E9-8EFF55F62BCE</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Type1</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>DCC3A90E75DCDECB4130BAE59E206F24AA453879</key>
+		<string>https://github.com/joakes90/Type1.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Type1.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>DCC3A90E75DCDECB4130BAE59E206F24AA453879</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/joakes90/Type1.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DCC3A90E75DCDECB4130BAE59E206F24AA453879</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DCC3A90E75DCDECB4130BAE59E206F24AA453879</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Type1</string>
+		</dict>
+	</array>
+</dict>
+</plist>
