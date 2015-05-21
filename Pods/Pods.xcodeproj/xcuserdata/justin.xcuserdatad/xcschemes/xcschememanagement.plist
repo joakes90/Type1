@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-Type1-iOSPlot.xcscheme</key>
+		<key>Pods-Type1-JBChartView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,12 +17,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>BFEF3D5A09F03CB27A4D4D92</key>
+		<key>64385210A328FDA4371D241B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DF6EB3442253A03562D9F104</key>
+		<key>ADB86488DFBA2D68D2027A8C</key>
 		<dict>
 			<key>primary</key>
 			<true/>

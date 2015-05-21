@@ -7,312 +7,276 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		18CEF23942930D373AC74025 /* PCHalfPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F83CA16C50394BA0F9EA32D /* PCHalfPieChart.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		1C96C21FD9FD6B49AE03DAE6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F226A110B9680F6B6FA554C3 /* Foundation.framework */; };
-		27DECCD101615ADFC3F4E421 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96B5BCD0CE3A363EBBE2073E /* CoreGraphics.framework */; };
-		3B6829CA7F5D83CA8492FDEC /* PCLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = B84CD07C1AC30408C2580F71 /* PCLineChartView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		3F5B9ADF1BE3ACC6D745BC07 /* PCPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = F46F56CCDC54D12D37D8DC0A /* PCPieChart.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		46F4972A7176C754FD1763EC /* Pods-Type1-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C8FF94E6CABB330086E60A40 /* Pods-Type1-dummy.m */; };
-		4A18F7CFFC095227F8109B22 /* Pods-Type1-iOSPlot-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 274D955043D02D8C9594BCE0 /* Pods-Type1-iOSPlot-dummy.m */; };
-		787C283C58EECB7A0D753C27 /* PCPieChart.h in Headers */ = {isa = PBXBuildFile; fileRef = 939FDB944526EB4CF74E9FB6 /* PCPieChart.h */; };
-		8B0BEB2E119BDABC01860F39 /* PCLineChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6468EED93A1DE8D56865BB8C /* PCLineChartView.h */; };
-		BD1F0A8E66E7BAC1CD86333D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F226A110B9680F6B6FA554C3 /* Foundation.framework */; };
-		FB566FD2B2622BD5AD23921D /* PCHalfPieChart.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E9C0CF1416736D53C62F12B /* PCHalfPieChart.h */; };
+		0295DDA57CA65E51E5227FCD /* Pods-Type1-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A0BD24863F5614DB6E598F /* Pods-Type1-dummy.m */; };
+		3FD2D4E5F58EBEE27F723EF4 /* JBBarChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE93F572489912859B9E2726 /* JBBarChartView.m */; };
+		55116A006B046A838155B8A3 /* JBChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D40CA7A8F69DEFD62069B1 /* JBChartView.m */; };
+		5E64F94A9E4DEADEFE420D41 /* JBLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F9BA4D32754071171E44EE4 /* JBLineChartView.m */; };
+		747F2203A5C0E966AFBC92A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC00CB7EEAD7FD905927260 /* Foundation.framework */; };
+		7ADA3814AB4B595C9D8B73C7 /* JBBarChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C09F52A02320BA962FC8250 /* JBBarChartView.h */; };
+		A1B9A16F8A79C2C136D22AF7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC00CB7EEAD7FD905927260 /* Foundation.framework */; };
+		AA3CE00365C56019AFA620B4 /* JBChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = EF1956C7F8777463AE26893F /* JBChartView.h */; };
+		E026CFBBED97AAEE7E0B2CE5 /* Pods-Type1-JBChartView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9024A87959C5C6E2A643AB /* Pods-Type1-JBChartView-dummy.m */; };
+		FB794642342B48252E914E52 /* JBLineChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = 709071D0EF79290618185681 /* JBLineChartView.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3CB54C22604AE7C23D5489C2 /* PBXContainerItemProxy */ = {
+		33E31DBF83E442C669C6C973 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 909C2767A98336642A07E6B5 /* Project object */;
+			containerPortal = 0DD6841E53F894B8A97F1C9D /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = DF6EB3442253A03562D9F104;
-			remoteInfo = "Pods-Type1-iOSPlot";
+			remoteGlobalIDString = ADB86488DFBA2D68D2027A8C;
+			remoteInfo = "Pods-Type1-JBChartView";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		11FBA982C295A7AB5BC729FB /* Pods-Type1-iOSPlot-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Type1-iOSPlot-Private.xcconfig"; sourceTree = "<group>"; };
-		2112B22820D703587B531861 /* Pods-Type1-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Type1-acknowledgements.markdown"; sourceTree = "<group>"; };
-		274D955043D02D8C9594BCE0 /* Pods-Type1-iOSPlot-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Type1-iOSPlot-dummy.m"; sourceTree = "<group>"; };
-		35AB435AAD582E58F082EAAB /* Pods-Type1-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Type1-acknowledgements.plist"; sourceTree = "<group>"; };
-		3898E614AB44C1C3530A0528 /* Pods-Type1-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Type1-resources.sh"; sourceTree = "<group>"; };
-		47246FD5DFCDC48C6D4F97A4 /* Pods-Type1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Type1.debug.xcconfig"; sourceTree = "<group>"; };
-		5E9C0CF1416736D53C62F12B /* PCHalfPieChart.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PCHalfPieChart.h; path = iOSPlot/PCHalfPieChart.h; sourceTree = "<group>"; };
-		6468EED93A1DE8D56865BB8C /* PCLineChartView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PCLineChartView.h; path = iOSPlot/Shared/PCLineChartView.h; sourceTree = "<group>"; };
-		8883A67FFCBA9750CEC61F1A /* libPods-Type1-iOSPlot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Type1-iOSPlot.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8F83CA16C50394BA0F9EA32D /* PCHalfPieChart.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PCHalfPieChart.m; path = iOSPlot/PCHalfPieChart.m; sourceTree = "<group>"; };
-		9017ACD1A0264749BD1DFA0E /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		939FDB944526EB4CF74E9FB6 /* PCPieChart.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PCPieChart.h; path = iOSPlot/Shared/PCPieChart.h; sourceTree = "<group>"; };
-		96B5BCD0CE3A363EBBE2073E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		B0C17F40962156AF198AE91B /* Pods-Type1-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Type1-environment.h"; sourceTree = "<group>"; };
-		B84CD07C1AC30408C2580F71 /* PCLineChartView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PCLineChartView.m; path = iOSPlot/Shared/PCLineChartView.m; sourceTree = "<group>"; };
-		C64F62FDF88F873AE8DDE5E5 /* Pods-Type1-iOSPlot-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Type1-iOSPlot-prefix.pch"; sourceTree = "<group>"; };
-		C8FF94E6CABB330086E60A40 /* Pods-Type1-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Type1-dummy.m"; sourceTree = "<group>"; };
-		DC693047C2567594E7FF9DEF /* Pods-Type1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Type1.release.xcconfig"; sourceTree = "<group>"; };
-		E048727E4B42C9965F3AF53D /* Pods-Type1-iOSPlot.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Type1-iOSPlot.xcconfig"; sourceTree = "<group>"; };
-		E807BA3070B288CF10BE8A2D /* libPods-Type1.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Type1.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F226A110B9680F6B6FA554C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		F46F56CCDC54D12D37D8DC0A /* PCPieChart.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PCPieChart.m; path = iOSPlot/Shared/PCPieChart.m; sourceTree = "<group>"; };
+		08A0BD24863F5614DB6E598F /* Pods-Type1-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Type1-dummy.m"; sourceTree = "<group>"; };
+		0EECDA0CD896E713FB72C1D0 /* Pods-Type1-JBChartView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Type1-JBChartView-prefix.pch"; sourceTree = "<group>"; };
+		1F9BA4D32754071171E44EE4 /* JBLineChartView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JBLineChartView.m; path = Classes/JBLineChartView.m; sourceTree = "<group>"; };
+		3A9024A87959C5C6E2A643AB /* Pods-Type1-JBChartView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Type1-JBChartView-dummy.m"; sourceTree = "<group>"; };
+		42E52E584236D5BE9E70E1A7 /* Pods-Type1-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Type1-acknowledgements.plist"; sourceTree = "<group>"; };
+		46D40CA7A8F69DEFD62069B1 /* JBChartView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JBChartView.m; path = Classes/JBChartView.m; sourceTree = "<group>"; };
+		4EB7EDB07068E7DE954F4153 /* Pods-Type1-JBChartView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Type1-JBChartView.xcconfig"; sourceTree = "<group>"; };
+		709071D0EF79290618185681 /* JBLineChartView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JBLineChartView.h; path = Classes/JBLineChartView.h; sourceTree = "<group>"; };
+		8C09F52A02320BA962FC8250 /* JBBarChartView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JBBarChartView.h; path = Classes/JBBarChartView.h; sourceTree = "<group>"; };
+		8EC00CB7EEAD7FD905927260 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		94385B6CAF0E735760089BB4 /* libPods-Type1-JBChartView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Type1-JBChartView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		943864C5DE6E1B9A108F308D /* libPods-Type1.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Type1.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4ED3774CBACF8508F99CF44 /* Pods-Type1-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Type1-environment.h"; sourceTree = "<group>"; };
+		B737C5E8150A8E2C58F27772 /* Pods-Type1-JBChartView-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Type1-JBChartView-Private.xcconfig"; sourceTree = "<group>"; };
+		BC582842029A8AD433E21240 /* Pods-Type1-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Type1-resources.sh"; sourceTree = "<group>"; };
+		BE93F572489912859B9E2726 /* JBBarChartView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JBBarChartView.m; path = Classes/JBBarChartView.m; sourceTree = "<group>"; };
+		C9E2B3BEC7D98CD590FFEDF3 /* Pods-Type1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Type1.debug.xcconfig"; sourceTree = "<group>"; };
+		D99A082AE08E0DBF9C593356 /* Pods-Type1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Type1.release.xcconfig"; sourceTree = "<group>"; };
+		DB72912AC278773004E16BCF /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		EF1956C7F8777463AE26893F /* JBChartView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JBChartView.h; path = Classes/JBChartView.h; sourceTree = "<group>"; };
+		F6999298B60023E03C40F3D2 /* Pods-Type1-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Type1-acknowledgements.markdown"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A32E0008FC8255510CA2DD65 /* Frameworks */ = {
+		90026B3095F6E5EFE6A0DA0F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27DECCD101615ADFC3F4E421 /* CoreGraphics.framework in Frameworks */,
-				1C96C21FD9FD6B49AE03DAE6 /* Foundation.framework in Frameworks */,
+				747F2203A5C0E966AFBC92A2 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D085FB37CDE5CAEDDE532DA8 /* Frameworks */ = {
+		BE4BBE55BB0EBE1BDD7FA54D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD1F0A8E66E7BAC1CD86333D /* Foundation.framework in Frameworks */,
+				A1B9A16F8A79C2C136D22AF7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4C102BA7B35452D59557564D /* iOSPlot */ = {
+		0CE814181D7761EE1B1718DD = {
 			isa = PBXGroup;
 			children = (
-				5E9C0CF1416736D53C62F12B /* PCHalfPieChart.h */,
-				8F83CA16C50394BA0F9EA32D /* PCHalfPieChart.m */,
-				6468EED93A1DE8D56865BB8C /* PCLineChartView.h */,
-				B84CD07C1AC30408C2580F71 /* PCLineChartView.m */,
-				939FDB944526EB4CF74E9FB6 /* PCPieChart.h */,
-				F46F56CCDC54D12D37D8DC0A /* PCPieChart.m */,
-				E427A82D2BC867B329FBA336 /* Support Files */,
+				DB72912AC278773004E16BCF /* Podfile */,
+				D9E0E5640317794D2C968BC7 /* Frameworks */,
+				36652468C85B621744DE545D /* Pods */,
+				9D3547D19643162C5984035B /* Products */,
+				A24240BB8469E01FFBE5DB59 /* Targets Support Files */,
 			);
-			path = iOSPlot;
 			sourceTree = "<group>";
 		};
-		5E3CE66012B83EB3671E4122 /* Products */ = {
+		12B964DE2E9714AEB71948AC /* Pods-Type1 */ = {
 			isa = PBXGroup;
 			children = (
-				E807BA3070B288CF10BE8A2D /* libPods-Type1.a */,
-				8883A67FFCBA9750CEC61F1A /* libPods-Type1-iOSPlot.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		672B9CD8803A954D908DCF0B /* Pods-Type1 */ = {
-			isa = PBXGroup;
-			children = (
-				2112B22820D703587B531861 /* Pods-Type1-acknowledgements.markdown */,
-				35AB435AAD582E58F082EAAB /* Pods-Type1-acknowledgements.plist */,
-				C8FF94E6CABB330086E60A40 /* Pods-Type1-dummy.m */,
-				B0C17F40962156AF198AE91B /* Pods-Type1-environment.h */,
-				3898E614AB44C1C3530A0528 /* Pods-Type1-resources.sh */,
-				47246FD5DFCDC48C6D4F97A4 /* Pods-Type1.debug.xcconfig */,
-				DC693047C2567594E7FF9DEF /* Pods-Type1.release.xcconfig */,
+				F6999298B60023E03C40F3D2 /* Pods-Type1-acknowledgements.markdown */,
+				42E52E584236D5BE9E70E1A7 /* Pods-Type1-acknowledgements.plist */,
+				08A0BD24863F5614DB6E598F /* Pods-Type1-dummy.m */,
+				B4ED3774CBACF8508F99CF44 /* Pods-Type1-environment.h */,
+				BC582842029A8AD433E21240 /* Pods-Type1-resources.sh */,
+				C9E2B3BEC7D98CD590FFEDF3 /* Pods-Type1.debug.xcconfig */,
+				D99A082AE08E0DBF9C593356 /* Pods-Type1.release.xcconfig */,
 			);
 			name = "Pods-Type1";
 			path = "Target Support Files/Pods-Type1";
 			sourceTree = "<group>";
 		};
-		8BFF0DED8ED0AEA5761C5762 /* Pods */ = {
+		36652468C85B621744DE545D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4C102BA7B35452D59557564D /* iOSPlot */,
+				A99E377D46A7D0A73F6718BD /* JBChartView */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		924C817AAC635279F0E09E98 = {
+		8F108ADFEAD7E2087D0ED16F /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				9017ACD1A0264749BD1DFA0E /* Podfile */,
-				CDC5529547BF658E055743A8 /* Frameworks */,
-				8BFF0DED8ED0AEA5761C5762 /* Pods */,
-				5E3CE66012B83EB3671E4122 /* Products */,
-				F6BFA14656E19377D0530D6A /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		975D049445D83F4CB9365F76 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				96B5BCD0CE3A363EBBE2073E /* CoreGraphics.framework */,
-				F226A110B9680F6B6FA554C3 /* Foundation.framework */,
+				8EC00CB7EEAD7FD905927260 /* Foundation.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		CDC5529547BF658E055743A8 /* Frameworks */ = {
+		9D3547D19643162C5984035B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				975D049445D83F4CB9365F76 /* iOS */,
+				943864C5DE6E1B9A108F308D /* libPods-Type1.a */,
+				94385B6CAF0E735760089BB4 /* libPods-Type1-JBChartView.a */,
 			);
-			name = Frameworks;
+			name = Products;
 			sourceTree = "<group>";
 		};
-		E427A82D2BC867B329FBA336 /* Support Files */ = {
+		A24240BB8469E01FFBE5DB59 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E048727E4B42C9965F3AF53D /* Pods-Type1-iOSPlot.xcconfig */,
-				11FBA982C295A7AB5BC729FB /* Pods-Type1-iOSPlot-Private.xcconfig */,
-				274D955043D02D8C9594BCE0 /* Pods-Type1-iOSPlot-dummy.m */,
-				C64F62FDF88F873AE8DDE5E5 /* Pods-Type1-iOSPlot-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-Type1-iOSPlot";
-			sourceTree = "<group>";
-		};
-		F6BFA14656E19377D0530D6A /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				672B9CD8803A954D908DCF0B /* Pods-Type1 */,
+				12B964DE2E9714AEB71948AC /* Pods-Type1 */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		A99E377D46A7D0A73F6718BD /* JBChartView */ = {
+			isa = PBXGroup;
+			children = (
+				8C09F52A02320BA962FC8250 /* JBBarChartView.h */,
+				BE93F572489912859B9E2726 /* JBBarChartView.m */,
+				EF1956C7F8777463AE26893F /* JBChartView.h */,
+				46D40CA7A8F69DEFD62069B1 /* JBChartView.m */,
+				709071D0EF79290618185681 /* JBLineChartView.h */,
+				1F9BA4D32754071171E44EE4 /* JBLineChartView.m */,
+				C8EBBE99014DCDE73FFD08D2 /* Support Files */,
+			);
+			path = JBChartView;
+			sourceTree = "<group>";
+		};
+		C8EBBE99014DCDE73FFD08D2 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4EB7EDB07068E7DE954F4153 /* Pods-Type1-JBChartView.xcconfig */,
+				B737C5E8150A8E2C58F27772 /* Pods-Type1-JBChartView-Private.xcconfig */,
+				3A9024A87959C5C6E2A643AB /* Pods-Type1-JBChartView-dummy.m */,
+				0EECDA0CD896E713FB72C1D0 /* Pods-Type1-JBChartView-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-Type1-JBChartView";
+			sourceTree = "<group>";
+		};
+		D9E0E5640317794D2C968BC7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8F108ADFEAD7E2087D0ED16F /* iOS */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		FD6F4DD92FE0034BCCEDEAC3 /* Headers */ = {
+		70C2B1BCA890F4FDF002DC6F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB566FD2B2622BD5AD23921D /* PCHalfPieChart.h in Headers */,
-				8B0BEB2E119BDABC01860F39 /* PCLineChartView.h in Headers */,
-				787C283C58EECB7A0D753C27 /* PCPieChart.h in Headers */,
+				7ADA3814AB4B595C9D8B73C7 /* JBBarChartView.h in Headers */,
+				AA3CE00365C56019AFA620B4 /* JBChartView.h in Headers */,
+				FB794642342B48252E914E52 /* JBLineChartView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		BFEF3D5A09F03CB27A4D4D92 /* Pods-Type1 */ = {
+		64385210A328FDA4371D241B /* Pods-Type1 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1AF5AA340E910BE35ADD1733 /* Build configuration list for PBXNativeTarget "Pods-Type1" */;
+			buildConfigurationList = 3B4E67E38740D1A542E8F2C7 /* Build configuration list for PBXNativeTarget "Pods-Type1" */;
 			buildPhases = (
-				055DA01FED326E0DD50146D0 /* Sources */,
-				D085FB37CDE5CAEDDE532DA8 /* Frameworks */,
+				280ABB657E5C420BB69D57F7 /* Sources */,
+				90026B3095F6E5EFE6A0DA0F /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D4F03FD9CCBCED39BA121478 /* PBXTargetDependency */,
+				E73BFEE7DFBCF5D84A123AB8 /* PBXTargetDependency */,
 			);
 			name = "Pods-Type1";
 			productName = "Pods-Type1";
-			productReference = E807BA3070B288CF10BE8A2D /* libPods-Type1.a */;
+			productReference = 943864C5DE6E1B9A108F308D /* libPods-Type1.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		DF6EB3442253A03562D9F104 /* Pods-Type1-iOSPlot */ = {
+		ADB86488DFBA2D68D2027A8C /* Pods-Type1-JBChartView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 75FA45DF2ABFD1FB1816193A /* Build configuration list for PBXNativeTarget "Pods-Type1-iOSPlot" */;
+			buildConfigurationList = 4D75C5B6729B94EFB4E57B01 /* Build configuration list for PBXNativeTarget "Pods-Type1-JBChartView" */;
 			buildPhases = (
-				069F5873C6C8A8DE2C4F045B /* Sources */,
-				A32E0008FC8255510CA2DD65 /* Frameworks */,
-				FD6F4DD92FE0034BCCEDEAC3 /* Headers */,
+				6B0993DF294DCB0E57FC66A8 /* Sources */,
+				BE4BBE55BB0EBE1BDD7FA54D /* Frameworks */,
+				70C2B1BCA890F4FDF002DC6F /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Pods-Type1-iOSPlot";
-			productName = "Pods-Type1-iOSPlot";
-			productReference = 8883A67FFCBA9750CEC61F1A /* libPods-Type1-iOSPlot.a */;
+			name = "Pods-Type1-JBChartView";
+			productName = "Pods-Type1-JBChartView";
+			productReference = 94385B6CAF0E735760089BB4 /* libPods-Type1-JBChartView.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		909C2767A98336642A07E6B5 /* Project object */ = {
+		0DD6841E53F894B8A97F1C9D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0640;
 			};
-			buildConfigurationList = 36096669908844940A51FBC3 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = EC248AE4D6478AF3C9A72E38 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 924C817AAC635279F0E09E98;
-			productRefGroup = 5E3CE66012B83EB3671E4122 /* Products */;
+			mainGroup = 0CE814181D7761EE1B1718DD;
+			productRefGroup = 9D3547D19643162C5984035B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BFEF3D5A09F03CB27A4D4D92 /* Pods-Type1 */,
-				DF6EB3442253A03562D9F104 /* Pods-Type1-iOSPlot */,
+				64385210A328FDA4371D241B /* Pods-Type1 */,
+				ADB86488DFBA2D68D2027A8C /* Pods-Type1-JBChartView */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		055DA01FED326E0DD50146D0 /* Sources */ = {
+		280ABB657E5C420BB69D57F7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46F4972A7176C754FD1763EC /* Pods-Type1-dummy.m in Sources */,
+				0295DDA57CA65E51E5227FCD /* Pods-Type1-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		069F5873C6C8A8DE2C4F045B /* Sources */ = {
+		6B0993DF294DCB0E57FC66A8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18CEF23942930D373AC74025 /* PCHalfPieChart.m in Sources */,
-				3B6829CA7F5D83CA8492FDEC /* PCLineChartView.m in Sources */,
-				3F5B9ADF1BE3ACC6D745BC07 /* PCPieChart.m in Sources */,
-				4A18F7CFFC095227F8109B22 /* Pods-Type1-iOSPlot-dummy.m in Sources */,
+				3FD2D4E5F58EBEE27F723EF4 /* JBBarChartView.m in Sources */,
+				55116A006B046A838155B8A3 /* JBChartView.m in Sources */,
+				5E64F94A9E4DEADEFE420D41 /* JBLineChartView.m in Sources */,
+				E026CFBBED97AAEE7E0B2CE5 /* Pods-Type1-JBChartView-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D4F03FD9CCBCED39BA121478 /* PBXTargetDependency */ = {
+		E73BFEE7DFBCF5D84A123AB8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "Pods-Type1-iOSPlot";
-			target = DF6EB3442253A03562D9F104 /* Pods-Type1-iOSPlot */;
-			targetProxy = 3CB54C22604AE7C23D5489C2 /* PBXContainerItemProxy */;
+			name = "Pods-Type1-JBChartView";
+			target = ADB86488DFBA2D68D2027A8C /* Pods-Type1-JBChartView */;
+			targetProxy = 33E31DBF83E442C669C6C973 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0FBD145AFD87EDD2B23A3D69 /* Release */ = {
+		09B6C3438F8CF13CDE83DF48 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 11FBA982C295A7AB5BC729FB /* Pods-Type1-iOSPlot-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-Type1-iOSPlot/Pods-Type1-iOSPlot-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		6E4F3E966DA38A5C6F055A45 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 11FBA982C295A7AB5BC729FB /* Pods-Type1-iOSPlot-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-Type1-iOSPlot/Pods-Type1-iOSPlot-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		749A26DA91123ADEBD7E49BF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DC693047C2567594E7FF9DEF /* Pods-Type1.release.xcconfig */;
+			baseConfigurationReference = D99A082AE08E0DBF9C593356 /* Pods-Type1.release.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -326,23 +290,7 @@
 			};
 			name = Release;
 		};
-		EAE0F1902AB2A68CCBF4BFA3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 47246FD5DFCDC48C6D4F97A4 /* Pods-Type1.debug.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		F01469DFC0F9B8651792BB88 /* Release */ = {
+		33624AADB23086383B4DDE6D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -376,7 +324,39 @@
 			};
 			name = Release;
 		};
-		F4AD1AD880260A9608D9ADA0 /* Debug */ = {
+		98178C84157E07D17B965C83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9E2B3BEC7D98CD590FFEDF3 /* Pods-Type1.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A85A5918E17C49BB34FDF826 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B737C5E8150A8E2C58F27772 /* Pods-Type1-JBChartView-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Type1-JBChartView/Pods-Type1-JBChartView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		DF6B15B5DCD12FE26826D171 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -415,37 +395,53 @@
 			};
 			name = Debug;
 		};
+		E0BAD2FF24331961FF5765CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B737C5E8150A8E2C58F27772 /* Pods-Type1-JBChartView-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Type1-JBChartView/Pods-Type1-JBChartView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1AF5AA340E910BE35ADD1733 /* Build configuration list for PBXNativeTarget "Pods-Type1" */ = {
+		3B4E67E38740D1A542E8F2C7 /* Build configuration list for PBXNativeTarget "Pods-Type1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EAE0F1902AB2A68CCBF4BFA3 /* Debug */,
-				749A26DA91123ADEBD7E49BF /* Release */,
+				98178C84157E07D17B965C83 /* Debug */,
+				09B6C3438F8CF13CDE83DF48 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		36096669908844940A51FBC3 /* Build configuration list for PBXProject "Pods" */ = {
+		4D75C5B6729B94EFB4E57B01 /* Build configuration list for PBXNativeTarget "Pods-Type1-JBChartView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F4AD1AD880260A9608D9ADA0 /* Debug */,
-				F01469DFC0F9B8651792BB88 /* Release */,
+				A85A5918E17C49BB34FDF826 /* Debug */,
+				E0BAD2FF24331961FF5765CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		75FA45DF2ABFD1FB1816193A /* Build configuration list for PBXNativeTarget "Pods-Type1-iOSPlot" */ = {
+		EC248AE4D6478AF3C9A72E38 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6E4F3E966DA38A5C6F055A45 /* Debug */,
-				0FBD145AFD87EDD2B23A3D69 /* Release */,
+				DF6B15B5DCD12FE26826D171 /* Debug */,
+				33624AADB23086383B4DDE6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 909C2767A98336642A07E6B5 /* Project object */;
+	rootObject = 0DD6841E53F894B8A97F1C9D /* Project object */;
 }

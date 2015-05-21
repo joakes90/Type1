@@ -1,6 +1,0 @@
-#include "Pods-Type1-iOSPlot.xcconfig"
-GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/iOSPlot" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/iOSPlot"
-OTHER_LDFLAGS = ${PODS_TYPE__IOSPLOT_OTHER_LDFLAGS} -ObjC
-PODS_ROOT = ${SRCROOT}
-SKIP_INSTALL = YES
