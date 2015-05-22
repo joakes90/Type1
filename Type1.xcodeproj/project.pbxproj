@@ -22,6 +22,7 @@
 		D0F730D51B0BD79800968517 /* InsulinModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0F730D31B0BD79800968517 /* InsulinModel.xcdatamodeld */; };
 		D0F730D81B0BD83D00968517 /* Injection.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F730D71B0BD83D00968517 /* Injection.m */; };
 		D0F730DB1B0BD86500968517 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F730DA1B0BD86500968517 /* Stack.m */; };
+		D215BC4E1B0FE7D40006BBDE /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D215BC4D1B0FE7D40006BBDE /* MainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		D0F730D71B0BD83D00968517 /* Injection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Injection.m; sourceTree = "<group>"; };
 		D0F730D91B0BD86500968517 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
 		D0F730DA1B0BD86500968517 /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
+		D215BC4C1B0FE7D40006BBDE /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		D215BC4D1B0FE7D40006BBDE /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		E7F6BB927790957C41E0225D /* Pods-Type1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Type1.release.xcconfig"; path = "Pods/Target Support Files/Pods-Type1/Pods-Type1.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,8 +100,8 @@
 		CE2C62618B0E0FEC31AA8E22 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B299A75FDDC692021ECDBEAD /* Pods-Type1.debug.xcconfig */,
 				E7F6BB927790957C41E0225D /* Pods-Type1.release.xcconfig */,
+				B299A75FDDC692021ECDBEAD /* Pods-Type1.debug.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -135,6 +138,8 @@
 				D04A32911B0A9B4E00933B2E /* AppDelegate.m */,
 				D04A32961B0A9B4E00933B2E /* ReviewViewController.h */,
 				D04A32971B0A9B4E00933B2E /* ReviewViewController.m */,
+				D215BC4C1B0FE7D40006BBDE /* MainViewController.h */,
+				D215BC4D1B0FE7D40006BBDE /* MainViewController.m */,
 				D04A32991B0A9B4E00933B2E /* Main.storyboard */,
 				D04A329C1B0A9B4E00933B2E /* Images.xcassets */,
 				D04A329E1B0A9B4E00933B2E /* LaunchScreen.xib */,
@@ -337,6 +342,7 @@
 				D0F730DB1B0BD86500968517 /* Stack.m in Sources */,
 				D0F730D81B0BD83D00968517 /* Injection.m in Sources */,
 				D0E1FDC21B0E7BB5005301A4 /* GraphView.m in Sources */,
+				D215BC4E1B0FE7D40006BBDE /* MainViewController.m in Sources */,
 				D04A328F1B0A9B4E00933B2E /* main.m in Sources */,
 				D04A32981B0A9B4E00933B2E /* ReviewViewController.m in Sources */,
 				D0F730D51B0BD79800968517 /* InsulinModel.xcdatamodeld in Sources */,
@@ -471,6 +477,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Type1/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -486,6 +493,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Type1/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

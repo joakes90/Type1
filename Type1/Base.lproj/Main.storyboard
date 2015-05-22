@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FON-5e-QUf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FON-5e-QUf">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="fIR-wc-qyx">
             <objects>
-                <viewController id="cgO-up-KNJ" sceneMemberID="viewController">
+                <viewController id="cgO-up-KNJ" customClass="MainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="20p-we-8sI"/>
                         <viewControllerLayoutGuide type="bottom" id="jxh-Cq-8Mt"/>
@@ -18,37 +18,71 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0w-Hy-MDB">
-                                <rect key="frame" x="261" y="138" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6L0-0g-pTq">
+                                <rect key="frame" x="-5" y="64" width="605" height="493"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0w-Hy-MDB">
+                                <rect key="frame" x="263" y="168" width="151" height="31"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <state key="normal" title="GLUCOSE">
+                                    <color key="titleColor" red="0.98431378602981567" green="0.08235294371843338" blue="0.47058826684951782" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" red="0.95294123890000004" green="0.91372555489999996" blue="0.97254908080000002" alpha="1" colorSpace="deviceRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="7ZM-uY-hNK" kind="show" id="sTK-mB-DIu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y8B-aB-Qqh">
-                                <rect key="frame" x="261" y="214" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y8B-aB-Qqh">
+                                <rect key="frame" x="270" y="250" width="129" height="45"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <state key="normal" title="INSULIN">
+                                    <color key="titleColor" red="0.98431378602981567" green="0.074509806931018829" blue="0.37647062540054321" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="jwW-wD-Ie3" kind="show" id="TiP-Cq-kA5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OqF-AU-BJi">
-                                <rect key="frame" x="261" y="333" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OqF-AU-BJi">
+                                <rect key="frame" x="278" y="341" width="104" height="36"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <state key="normal" title="FOOD">
+                                    <color key="titleColor" red="0.98431378602981567" green="0.062745101749897003" blue="0.27450981736183167" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="lfv-7M-TJT" kind="show" id="mh4-fZ-dpk"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61g-lF-YLP">
+                                <rect key="frame" x="201" y="455" width="198" height="60"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="32"/>
+                                <state key="normal" title="READINGS">
+                                    <color key="titleColor" red="0.98431378602981567" green="0.062745101749897003" blue="0.28627452254295349" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.86274516582489014" green="0.95294123888015747" blue="0.82745105028152466" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstItem="OqF-AU-BJi" firstAttribute="top" secondItem="Y8B-aB-Qqh" secondAttribute="bottom" constant="67" id="0bl-Kl-47Y"/>
+                            <constraint firstAttribute="trailing" secondItem="6L0-0g-pTq" secondAttribute="trailing" id="0zz-Jh-2p6"/>
+                            <constraint firstItem="6L0-0g-pTq" firstAttribute="leading" secondItem="cer-l5-kel" secondAttribute="leadingMargin" constant="-21" id="3gv-ZM-xrZ"/>
+                            <constraint firstAttribute="centerX" secondItem="61g-lF-YLP" secondAttribute="centerX" id="43o-RV-6KS"/>
+                            <constraint firstItem="6L0-0g-pTq" firstAttribute="top" secondItem="20p-we-8sI" secondAttribute="bottom" id="6Cd-46-K5R"/>
+                            <constraint firstItem="Y8B-aB-Qqh" firstAttribute="top" secondItem="W0w-Hy-MDB" secondAttribute="bottom" constant="78" id="ABF-1q-jVv"/>
+                            <constraint firstItem="Y8B-aB-Qqh" firstAttribute="top" secondItem="W0w-Hy-MDB" secondAttribute="bottom" constant="78" id="NdT-9u-pOE"/>
+                            <constraint firstAttribute="centerX" secondItem="W0w-Hy-MDB" secondAttribute="centerX" id="VeI-ho-xX0"/>
+                            <constraint firstAttribute="centerX" secondItem="Y8B-aB-Qqh" secondAttribute="centerX" id="YD5-DV-VrQ"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="6L0-0g-pTq" secondAttribute="bottom" constant="43" id="Z5l-66-hbd"/>
+                            <constraint firstItem="61g-lF-YLP" firstAttribute="top" secondItem="OqF-AU-BJi" secondAttribute="bottom" constant="78" id="gnk-XH-FuI"/>
+                            <constraint firstAttribute="centerX" secondItem="OqF-AU-BJi" secondAttribute="centerX" id="ibS-iV-GbO"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VEy-la-rWC"/>
+                    <connections>
+                        <outlet property="imageView" destination="6L0-0g-pTq" id="PpE-pL-AI3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ISF-0x-wxR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
