@@ -54,6 +54,7 @@
 }
 
 -(void) returnGarray{
+   
     NSLog(@"%@", [[HealthKitController sharedInstance] grabGlucoseData]);
     
 }

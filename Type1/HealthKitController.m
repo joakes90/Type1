@@ -265,7 +265,8 @@
                                                                     limit:HKObjectQueryNoLimit
                                                         sortDescriptors:nil
 resultsHandler:^(HKSampleQuery *query, NSArray *results, NSError *error) {
-    NSLog(@"%@", results);
+    self.Glucosedata = results;
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"dailyG" object:nil];
     
 }];
     [_HealthStore executeQuery:glucoseQuerey];
