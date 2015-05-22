@@ -15,22 +15,31 @@
 @property (strong, nonatomic) IBOutlet UILabel *infoLabel;
 
 
-@property (strong, nonatomic) NSArray *xAxis;
-@property (strong, nonatomic) NSArray *data;
+@property (strong, nonatomic) NSMutableArray *xAxis;
+@property (strong, nonatomic) NSMutableArray *data;
 @end
 
 @implementation ReviewViewController
+- (void) viewWillAppear:(BOOL)animated{
+    }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.data = [[NSMutableArray alloc] init];
+    self.xAxis = [[NSMutableArray alloc] init];
     
-   
+    [[HealthKitController sharedInstance] allGlucoseNumbersForToday];
+
+
+    self.GraphView.backgroundColor = [UIColor darkGrayColor];
+    self.GraphView.maximumValue = 400.0;
+    self.GraphView.minimumValue = 0;
     
+    [self performSelector:@selector(updateGraph) withObject:nil afterDelay:0.75];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(buildGraph) name:@"dailyG" object:nil];
     // Do any additional setup after loading the view, typically from a nib.
-    self.xAxis = @[@"12", @"2", @"4", @"6", @"8", @"10",@"12", @"2", @"4", @"6", @"8", @"10"];
-    self.data = @[@40.0, @400.0, @250.0, @200.0, @250.0, @300.0, @200.0, @250.0, @200.0, @350.0];
+
     
-    [self buildGraph];
     }
 
 - (void)didReceiveMemoryWarning {
@@ -39,15 +48,28 @@
 }
 
 -(void)buildGraph {
-    self.GraphView.dataSource = self;
-    self.GraphView.delegate = self;
-    self.GraphView.backgroundColor = [UIColor darkGrayColor];
-    self.GraphView.maximumValue = 400.0;
-    self.GraphView.minimumValue = 0;
-    
-    [self.GraphView reloadData];
+
+    HKUnit *mg = [HKUnit gramUnitWithMetricPrefix:HKMetricPrefixMilli];
+    HKUnit *dl = [HKUnit literUnitWithMetricPrefix:HKMetricPrefixDeci];
+    HKUnit *mgPerDl = [mg unitDividedByUnit:dl];
 
     
+    NSArray *rawData = [[HealthKitController sharedInstance] grabGlucoseData];
+    
+    for (HKQuantitySample *stat in rawData) {
+        double quantity = [[stat quantity] doubleValueForUnit:mgPerDl];
+        
+        [self.data addObject:[NSNumber numberWithDouble:quantity]];
+        [self.xAxis addObject:[stat startDate]];
+    }
+    self.GraphView.dataSource = self;
+    self.GraphView.delegate = self;
+
+    [self.GraphView reloadData];
+}
+
+-(void)updateGraph {
+    [self buildGraph];
 }
 
 #pragma mark - Requiered JBLineGraph methods
@@ -93,7 +115,9 @@
 }
 
 -(void)lineChartView:(JBLineChartView *)lineChartView didSelectLineAtIndex:(NSUInteger)lineIndex horizontalIndex:(NSUInteger)horizontalIndex {
-    self.infoLabel.text = [NSString stringWithFormat:@"Blood glucose for add later: add later"];
+    NSString *dateString = [NSDateFormatter localizedStringFromDate:self.xAxis[horizontalIndex] dateStyle:nil timeStyle:NSDateFormatterShortStyle];
+    
+    self.infoLabel.text = [NSString stringWithFormat:@"Blood glucose for %@: %.0f",dateString, [self.data[horizontalIndex] doubleValue]];
 }
 
 -(void)didDeselectLineInLineChartView:(JBLineChartView *)lineChartView {

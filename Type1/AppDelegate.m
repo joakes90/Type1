@@ -23,10 +23,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+        
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(returnGarray) name:@"dailyG" object:nil];
-    
-    [[HealthKitController sharedInstance] allGlucoseNumbersForToday];
     return YES;
 }
 
@@ -53,11 +51,6 @@
     // Saves changes in the application's managed object context before the application terminates.
 }
 
--(void) returnGarray{
-   
-    NSLog(@"%@", [[HealthKitController sharedInstance] grabGlucoseData]);
-    
-}
 
 
 @end
