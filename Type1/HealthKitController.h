@@ -42,6 +42,8 @@
 
 -(void)carbStatusQuereyforNumberOfWeeks:(int)weeks;
 
+-(void)allGlucoseNumbersForToday;
+
 -(NSArray *)numberOfinjectionsperDayforNumberOfWeeks:(int)weeks;
 
 //RETREAVE GENERATED NSARRAYS
@@ -53,5 +55,7 @@
 -(NSArray *)grabProtein;
 
 -(NSArray *)grabCarbs;
+
+-(NSArray *)grabGlucoseData;
 
 @end

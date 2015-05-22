@@ -23,6 +23,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+   
+    
     // Do any additional setup after loading the view, typically from a nib.
     self.xAxis = @[@"12", @"2", @"4", @"6", @"8", @"10",@"12", @"2", @"4", @"6", @"8", @"10"];
     self.data = @[@40.0, @400.0, @250.0, @200.0, @250.0, @300.0, @200.0, @250.0, @200.0, @350.0];
