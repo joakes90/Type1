@@ -15,18 +15,34 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W0N-14-zRc" customClass="GraphView">
-                                <rect key="frame" x="16" y="100" width="568" height="290"/>
+                                <rect key="frame" x="0.0" y="57" width="375" height="249"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="W0N-14-zRc" secondAttribute="height" multiplier="142:43" constant="-389.67441860465124" id="Bhd-kj-Aif"/>
+                                    <constraint firstAttribute="height" constant="249" id="7wM-mV-MMw"/>
+                                    <constraint firstAttribute="width" secondItem="W0N-14-zRc" secondAttribute="height" multiplier="142:43" constant="-76.976744186046517" id="Bhd-kj-Aif"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Bhd-kj-Aif"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Glucose Levels" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m15-FY-a1U">
-                                <rect key="frame" x="242" y="59" width="117" height="21"/>
+                                <rect key="frame" x="129" y="33" width="117" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T6M-Ym-4XF">
+                                <rect key="frame" x="0.0" y="306" width="375" height="21"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="1It-ow-RCf"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -34,20 +50,35 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="W0N-14-zRc" firstAttribute="top" secondItem="m15-FY-a1U" secondAttribute="bottom" constant="20" id="O7Y-sV-yuc"/>
-                            <constraint firstItem="W0N-14-zRc" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="Twn-I7-Nxa"/>
-                            <constraint firstItem="m15-FY-a1U" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="39" id="aUy-KF-xxU"/>
-                            <constraint firstItem="W0N-14-zRc" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="nMa-xd-S4Y"/>
-                            <constraint firstAttribute="centerX" secondItem="m15-FY-a1U" secondAttribute="centerX" constant="-0.5" id="zVD-2s-P1y"/>
+                            <constraint firstItem="W0N-14-zRc" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="1oq-6j-Khc"/>
+                            <constraint firstItem="T6M-Ym-4XF" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="2f7-4A-lYA"/>
+                            <constraint firstItem="T6M-Ym-4XF" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="7jQ-ze-182"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="T6M-Ym-4XF" secondAttribute="trailing" constant="-16" id="8Vt-wJ-6Zu"/>
+                            <constraint firstItem="T6M-Ym-4XF" firstAttribute="top" secondItem="W0N-14-zRc" secondAttribute="bottom" id="Fmr-1h-bxA"/>
+                            <constraint firstItem="W0N-14-zRc" firstAttribute="top" secondItem="m15-FY-a1U" secondAttribute="bottom" constant="3" id="KxG-PJ-2wv"/>
+                            <constraint firstAttribute="centerX" secondItem="m15-FY-a1U" secondAttribute="centerX" id="SN5-dc-M0Z"/>
+                            <constraint firstItem="T6M-Ym-4XF" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="SzN-ga-Iof"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="W0N-14-zRc" secondAttribute="trailing" constant="-16" id="eVX-ss-kpy"/>
+                            <constraint firstItem="m15-FY-a1U" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="13" id="mX3-Tp-gC9"/>
+                            <constraint firstItem="T6M-Ym-4XF" firstAttribute="top" secondItem="W0N-14-zRc" secondAttribute="bottom" constant="1" id="uxT-Bb-I2J"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="2f7-4A-lYA"/>
+                                <exclude reference="7jQ-ze-182"/>
+                                <exclude reference="uxT-Bb-I2J"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="GraphView" destination="W0N-14-zRc" id="OWe-5y-tdB"/>
+                        <outlet property="infoLabel" destination="T6M-Ym-4XF" id="TBi-mN-Ubt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-269" y="364"/>
+            <point key="canvasLocation" x="-270.5" y="392.5"/>
         </scene>
     </scenes>
 </document>
