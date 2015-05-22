@@ -257,27 +257,18 @@
 -(void)allGlucoseNumbersForToday {
     HKQuantityType *glucoseType = [HKQuantityType quantityTypeForIdentifier:HKQuantityTypeIdentifierBloodGlucose];
     NSDate *anchorDate = [NSDate dateWithTimeIntervalSinceNow:-86400];
-    NSDateComponents *hour = [[NSDateComponents alloc] init];
-    hour.hour = 1;
+    NSPredicate *predicate = [HKQuery predicateForSamplesWithStartDate:anchorDate endDate:[NSDate new] options:HKQueryOptionNone];
 
     
-    HKAnchoredObjectQuery *glucoseAOQuerey = [[HKAnchoredObjectQuery alloc] initWithType:glucoseType
-                                                                                predicate:nil
-                                                                                anchor:anchorDate
-                                                                                    limit:HKObjectQueryNoLimit
-                                                                            completionHandler:^(HKAnchoredObjectQuery *query, NSArray *results, NSUInteger newAnchor, NSError *error) {
-                                                                                if (error) {
-                                                                                    NSLog(@"Error occured");
-                                                                                    abort();
-                                                                                } else {
-                                                                                    NSMutableArray *resultsArray = [[NSMutableArray alloc] init];
-                                                                                    
-                                                                                    self.Glucosedata = results;
-//                                                                                    self.Glucosedata = resultsArray;
-                                                                                    [[NSNotificationCenter defaultCenter] postNotificationName:@"dailyG" object:nil];
-                                                                                }
-                                                                            }];
-    [_HealthStore executeQuery:glucoseAOQuerey];
+   HKSampleQuery *glucoseQuerey = [[HKSampleQuery alloc] initWithSampleType:glucoseType
+                                                                predicate:predicate
+                                                                    limit:HKObjectQueryNoLimit
+                                                        sortDescriptors:nil
+resultsHandler:^(HKSampleQuery *query, NSArray *results, NSError *error) {
+    NSLog(@"%@", results);
+    
+}];
+    [_HealthStore executeQuery:glucoseQuerey];
     
 }
 
