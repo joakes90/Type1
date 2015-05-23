@@ -117,7 +117,7 @@
 -(void)lineChartView:(JBLineChartView *)lineChartView didSelectLineAtIndex:(NSUInteger)lineIndex horizontalIndex:(NSUInteger)horizontalIndex {
     NSString *dateString = [NSDateFormatter localizedStringFromDate:self.xAxis[horizontalIndex] dateStyle:nil timeStyle:NSDateFormatterShortStyle];
     
-    self.infoLabel.text = [NSString stringWithFormat:@"Blood glucose for %@: %.0f",dateString, [self.data[horizontalIndex] doubleValue]];
+    self.infoLabel.text = [NSString stringWithFormat:@"Blood glucose for %@: %.0f mg/dL",dateString, [self.data[horizontalIndex] doubleValue]];
 }
 
 -(void)didDeselectLineInLineChartView:(JBLineChartView *)lineChartView {

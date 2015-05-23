@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FON-5e-QUf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FON-5e-QUf">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -21,8 +21,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6L0-0g-pTq">
                                 <rect key="frame" x="-5" y="64" width="605" height="493"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0w-Hy-MDB">
-                                <rect key="frame" x="263" y="168" width="151" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0w-Hy-MDB">
+                                <rect key="frame" x="226" y="116" width="143" height="51"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
                                 <state key="normal" title="GLUCOSE">
                                     <color key="titleColor" red="0.98431378602981567" green="0.08235294371843338" blue="0.47058826684951782" alpha="1" colorSpace="deviceRGB"/>
@@ -32,19 +32,12 @@
                                     <segue destination="7ZM-uY-hNK" kind="show" id="sTK-mB-DIu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y8B-aB-Qqh">
-                                <rect key="frame" x="270" y="250" width="129" height="45"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
-                                <state key="normal" title="INSULIN">
-                                    <color key="titleColor" red="0.98431378602981567" green="0.074509806931018829" blue="0.37647062540054321" alpha="1" colorSpace="deviceRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="jwW-wD-Ie3" kind="show" id="TiP-Cq-kA5"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OqF-AU-BJi">
-                                <rect key="frame" x="278" y="341" width="104" height="36"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OqF-AU-BJi">
+                                <rect key="frame" x="248" y="293" width="104" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="P9r-hZ-dZ4"/>
+                                    <constraint firstAttribute="width" constant="104" id="dGz-EW-Iqi"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
                                 <state key="normal" title="FOOD">
                                     <color key="titleColor" red="0.98431378602981567" green="0.062745101749897003" blue="0.27450981736183167" alpha="1" colorSpace="deviceRGB"/>
@@ -54,30 +47,38 @@
                                     <segue destination="lfv-7M-TJT" kind="show" id="mh4-fZ-dpk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61g-lF-YLP">
-                                <rect key="frame" x="201" y="455" width="198" height="60"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="32"/>
-                                <state key="normal" title="READINGS">
-                                    <color key="titleColor" red="0.98431378602981567" green="0.062745101749897003" blue="0.28627452254295349" alpha="1" colorSpace="deviceRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y8B-aB-Qqh">
+                                <rect key="frame" x="239" y="203" width="122" height="51"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <state key="normal" title="INSULIN">
+                                    <color key="titleColor" red="0.98431378602981567" green="0.074509806931018829" blue="0.37647062540054321" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="jwW-wD-Ie3" kind="show" id="TiP-Cq-kA5"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.86274516582489014" green="0.95294123888015747" blue="0.82745105028152466" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
-                            <constraint firstItem="OqF-AU-BJi" firstAttribute="top" secondItem="Y8B-aB-Qqh" secondAttribute="bottom" constant="67" id="0bl-Kl-47Y"/>
+                            <constraint firstItem="OqF-AU-BJi" firstAttribute="top" secondItem="Y8B-aB-Qqh" secondAttribute="bottom" constant="74" id="0bl-Kl-47Y"/>
                             <constraint firstAttribute="trailing" secondItem="6L0-0g-pTq" secondAttribute="trailing" id="0zz-Jh-2p6"/>
+                            <constraint firstAttribute="centerX" secondItem="W0w-Hy-MDB" secondAttribute="centerX" constant="2.5" id="17h-cL-ia9"/>
                             <constraint firstItem="6L0-0g-pTq" firstAttribute="leading" secondItem="cer-l5-kel" secondAttribute="leadingMargin" constant="-21" id="3gv-ZM-xrZ"/>
-                            <constraint firstAttribute="centerX" secondItem="61g-lF-YLP" secondAttribute="centerX" id="43o-RV-6KS"/>
                             <constraint firstItem="6L0-0g-pTq" firstAttribute="top" secondItem="20p-we-8sI" secondAttribute="bottom" id="6Cd-46-K5R"/>
-                            <constraint firstItem="Y8B-aB-Qqh" firstAttribute="top" secondItem="W0w-Hy-MDB" secondAttribute="bottom" constant="78" id="ABF-1q-jVv"/>
-                            <constraint firstItem="Y8B-aB-Qqh" firstAttribute="top" secondItem="W0w-Hy-MDB" secondAttribute="bottom" constant="78" id="NdT-9u-pOE"/>
-                            <constraint firstAttribute="centerX" secondItem="W0w-Hy-MDB" secondAttribute="centerX" id="VeI-ho-xX0"/>
                             <constraint firstAttribute="centerX" secondItem="Y8B-aB-Qqh" secondAttribute="centerX" id="YD5-DV-VrQ"/>
                             <constraint firstAttribute="bottomMargin" secondItem="6L0-0g-pTq" secondAttribute="bottom" constant="43" id="Z5l-66-hbd"/>
-                            <constraint firstItem="61g-lF-YLP" firstAttribute="top" secondItem="OqF-AU-BJi" secondAttribute="bottom" constant="78" id="gnk-XH-FuI"/>
+                            <constraint firstItem="6L0-0g-pTq" firstAttribute="centerX" secondItem="OqF-AU-BJi" secondAttribute="centerX" constant="-2.5" id="b1G-wb-HJd"/>
+                            <constraint firstItem="Y8B-aB-Qqh" firstAttribute="top" secondItem="W0w-Hy-MDB" secondAttribute="bottom" constant="36" id="dyx-CZ-RTl"/>
                             <constraint firstAttribute="centerX" secondItem="OqF-AU-BJi" secondAttribute="centerX" id="ibS-iV-GbO"/>
+                            <constraint firstItem="W0w-Hy-MDB" firstAttribute="top" secondItem="20p-we-8sI" secondAttribute="bottom" constant="52" id="uYf-LH-yEc"/>
+                            <constraint firstItem="OqF-AU-BJi" firstAttribute="top" secondItem="Y8B-aB-Qqh" secondAttribute="bottom" constant="39" id="xJr-ls-YYM"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="0bl-Kl-47Y"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="VEy-la-rWC"/>
                     <connections>
@@ -124,10 +125,10 @@
             </objects>
             <point key="canvasLocation" x="2025" y="261"/>
         </scene>
-        <!--View Controller-->
+        <!--Glucose View Controller-->
         <scene sceneID="Pl7-6J-ZO8">
             <objects>
-                <viewController id="7ZM-uY-hNK" sceneMemberID="viewController">
+                <viewController id="7ZM-uY-hNK" customClass="GlucoseViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ivx-Es-Ytn"/>
                         <viewControllerLayoutGuide type="bottom" id="88I-3l-TSn"/>
@@ -135,10 +136,65 @@
                     <view key="view" contentMode="scaleToFill" id="8r0-Vk-Dam">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwZ-6Y-Yns">
+                                <rect key="frame" x="266" y="492" width="67" height="51"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="1" green="0.10159769239999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="save:" destination="7ZM-uY-hNK" eventType="touchUpInside" id="GIA-Wt-Ht6"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Glucose Reading" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBV-4v-Mu5">
+                                <rect key="frame" x="183" y="116" width="231.5" height="39"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="09e-kN-5x6">
+                                <rect key="frame" x="183" y="227" width="232" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="232" id="oZG-33-FQv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mg/dL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HBX-Cu-XnD">
+                                <rect key="frame" x="495" y="222" width="89" height="39"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="09e-kN-5x6" firstAttribute="top" secondItem="oBV-4v-Mu5" secondAttribute="bottom" constant="72" id="2vU-vg-rOb"/>
+                            <constraint firstItem="HBX-Cu-XnD" firstAttribute="trailing" secondItem="8r0-Vk-Dam" secondAttribute="trailingMargin" id="37w-Nb-CxU"/>
+                            <constraint firstAttribute="centerX" secondItem="oBV-4v-Mu5" secondAttribute="centerX" constant="1" id="9lX-tK-jop"/>
+                            <constraint firstAttribute="centerX" secondItem="cwZ-6Y-Yns" secondAttribute="centerX" id="GED-Ct-keE"/>
+                            <constraint firstAttribute="centerX" secondItem="09e-kN-5x6" secondAttribute="centerX" constant="1" id="HDi-Oa-i99"/>
+                            <constraint firstItem="88I-3l-TSn" firstAttribute="top" secondItem="cwZ-6Y-Yns" secondAttribute="bottom" constant="8" id="Pbz-yv-O19"/>
+                            <constraint firstItem="oBV-4v-Mu5" firstAttribute="top" secondItem="ivx-Es-Ytn" secondAttribute="bottom" constant="52" id="Xk5-NE-GzY"/>
+                            <constraint firstItem="HBX-Cu-XnD" firstAttribute="centerY" secondItem="09e-kN-5x6" secondAttribute="centerY" constant="-0.5" id="olF-Ov-TS6"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Zum-fQ-rXh" appends="YES" id="Rde-bW-jbp"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="TextField" destination="09e-kN-5x6" id="R43-uz-Rel"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k6I-zg-68x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Zum-fQ-rXh">
+                    <connections>
+                        <action selector="screenTapped:" destination="7ZM-uY-hNK" id="4Vn-QD-wyT"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2025" y="-1105"/>
         </scene>
