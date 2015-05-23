@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		14B46B33C082EBA7934AE0C4 /* libPods-Type1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3C78CD2F10257C5CF70C062 /* libPods-Type1.a */; };
 		D01111BF1B10039C00A53761 /* GlucoseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01111BE1B10039C00A53761 /* GlucoseViewController.m */; };
+		D01111C21B10ED7B00A53761 /* InsulinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01111C11B10ED7B00A53761 /* InsulinViewController.m */; };
 		D04A328F1B0A9B4E00933B2E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D04A328E1B0A9B4E00933B2E /* main.m */; };
 		D04A32921B0A9B4E00933B2E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D04A32911B0A9B4E00933B2E /* AppDelegate.m */; };
 		D04A32981B0A9B4E00933B2E /* ReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D04A32971B0A9B4E00933B2E /* ReviewViewController.m */; };
@@ -41,6 +42,8 @@
 		B3C78CD2F10257C5CF70C062 /* libPods-Type1.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Type1.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D01111BD1B10039C00A53761 /* GlucoseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlucoseViewController.h; sourceTree = "<group>"; };
 		D01111BE1B10039C00A53761 /* GlucoseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlucoseViewController.m; sourceTree = "<group>"; };
+		D01111C01B10ED7B00A53761 /* InsulinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InsulinViewController.h; sourceTree = "<group>"; };
+		D01111C11B10ED7B00A53761 /* InsulinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InsulinViewController.m; sourceTree = "<group>"; };
 		D04A32891B0A9B4D00933B2E /* Type1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Type1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D04A328D1B0A9B4E00933B2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D04A328E1B0A9B4E00933B2E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -112,6 +115,8 @@
 		D01111BC1B10035C00A53761 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D01111C01B10ED7B00A53761 /* InsulinViewController.h */,
+				D01111C11B10ED7B00A53761 /* InsulinViewController.m */,
 				D215BC4C1B0FE7D40006BBDE /* MainViewController.h */,
 				D215BC4D1B0FE7D40006BBDE /* MainViewController.m */,
 				D01111BD1B10039C00A53761 /* GlucoseViewController.h */,
@@ -355,6 +360,7 @@
 				D0F730DB1B0BD86500968517 /* Stack.m in Sources */,
 				D0F730D81B0BD83D00968517 /* Injection.m in Sources */,
 				D0E1FDC21B0E7BB5005301A4 /* GraphView.m in Sources */,
+				D01111C21B10ED7B00A53761 /* InsulinViewController.m in Sources */,
 				D215BC4E1B0FE7D40006BBDE /* MainViewController.m in Sources */,
 				D01111BF1B10039C00A53761 /* GlucoseViewController.m in Sources */,
 				D04A328F1B0A9B4E00933B2E /* main.m in Sources */,

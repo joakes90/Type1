@@ -41,6 +41,8 @@
     }
 
 -(void)viewWillAppear:(BOOL)animated {
+    self.data = [[NSMutableArray alloc] init];
+    self.xAxis = [[NSMutableArray alloc] init];
     [self performSelector:@selector(updateGraph) withObject:nil afterDelay:0.75];
 }
 
@@ -117,7 +119,7 @@
 }
 
 -(void)lineChartView:(JBLineChartView *)lineChartView didSelectLineAtIndex:(NSUInteger)lineIndex horizontalIndex:(NSUInteger)horizontalIndex {
-    NSString *dateString = [NSDateFormatter localizedStringFromDate:self.xAxis[horizontalIndex] dateStyle:nil timeStyle:NSDateFormatterShortStyle];
+    NSString *dateString = [NSDateFormatter localizedStringFromDate:self.xAxis[horizontalIndex] dateStyle:NSDateFormatterNoStyle timeStyle:NSDateFormatterShortStyle];
     
     self.infoLabel.text = [NSString stringWithFormat:@"Blood glucose for %@: %.0f mg/dL",dateString, [self.data[horizontalIndex] doubleValue]];
 }
