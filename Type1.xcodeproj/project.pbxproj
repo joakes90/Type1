@@ -116,6 +116,8 @@
 				D215BC4D1B0FE7D40006BBDE /* MainViewController.m */,
 				D01111BD1B10039C00A53761 /* GlucoseViewController.h */,
 				D01111BE1B10039C00A53761 /* GlucoseViewController.m */,
+				D04A32961B0A9B4E00933B2E /* ReviewViewController.h */,
+				D04A32971B0A9B4E00933B2E /* ReviewViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -151,8 +153,6 @@
 				D04A32B51B0A9FDF00933B2E /* Model Objects */,
 				D04A32901B0A9B4E00933B2E /* AppDelegate.h */,
 				D04A32911B0A9B4E00933B2E /* AppDelegate.m */,
-				D04A32961B0A9B4E00933B2E /* ReviewViewController.h */,
-				D04A32971B0A9B4E00933B2E /* ReviewViewController.m */,
 				D04A32991B0A9B4E00933B2E /* Main.storyboard */,
 				D04A329C1B0A9B4E00933B2E /* Images.xcassets */,
 				D04A329E1B0A9B4E00933B2E /* LaunchScreen.xib */,
