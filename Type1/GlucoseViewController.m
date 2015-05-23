@@ -33,6 +33,7 @@
 }
 
 - (IBAction)screenTapped:(id)sender {
+    [[HealthKitController sharedInstance] requestHKPermission];
     [self.TextField resignFirstResponder];
 }
 

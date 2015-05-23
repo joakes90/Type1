@@ -20,8 +20,6 @@
 @end
 
 @implementation ReviewViewController
-- (void) viewWillAppear:(BOOL)animated{
-    }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -35,12 +33,16 @@
     self.GraphView.maximumValue = 400.0;
     self.GraphView.minimumValue = 0;
     
-    [self performSelector:@selector(updateGraph) withObject:nil afterDelay:0.75];
+    
 //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(buildGraph) name:@"dailyG" object:nil];
     // Do any additional setup after loading the view, typically from a nib.
 
     
     }
+
+-(void)viewWillAppear:(BOOL)animated {
+    [self performSelector:@selector(updateGraph) withObject:nil afterDelay:0.75];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
