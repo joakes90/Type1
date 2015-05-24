@@ -19,6 +19,7 @@
 		D04A32AC1B0A9B4E00933B2E /* Type1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = D04A32AB1B0A9B4E00933B2E /* Type1Tests.m */; };
 		D04A32B81B0AA09300933B2E /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04A32B71B0AA09300933B2E /* HealthKit.framework */; };
 		D04A32BB1B0AA0D800933B2E /* HealthKitController.m in Sources */ = {isa = PBXBuildFile; fileRef = D04A32BA1B0AA0D800933B2E /* HealthKitController.m */; };
+		D08E73161B128FAE00ACD385 /* FoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D08E73151B128FAE00ACD385 /* FoodViewController.m */; };
 		D0E1FDC21B0E7BB5005301A4 /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E1FDC11B0E7BB5005301A4 /* GraphView.m */; };
 		D0F730D21B0BD71C00968517 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F730D11B0BD71C00968517 /* CoreData.framework */; };
 		D0F730D51B0BD79800968517 /* InsulinModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0F730D31B0BD79800968517 /* InsulinModel.xcdatamodeld */; };
@@ -61,6 +62,8 @@
 		D04A32B71B0AA09300933B2E /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		D04A32B91B0AA0D800933B2E /* HealthKitController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthKitController.h; sourceTree = "<group>"; };
 		D04A32BA1B0AA0D800933B2E /* HealthKitController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthKitController.m; sourceTree = "<group>"; };
+		D08E73141B128FAE00ACD385 /* FoodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodViewController.h; sourceTree = "<group>"; };
+		D08E73151B128FAE00ACD385 /* FoodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodViewController.m; sourceTree = "<group>"; };
 		D0E1FDC01B0E7BB5005301A4 /* GraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphView.h; sourceTree = "<group>"; };
 		D0E1FDC11B0E7BB5005301A4 /* GraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphView.m; sourceTree = "<group>"; };
 		D0F730D11B0BD71C00968517 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -123,6 +126,8 @@
 				D01111BE1B10039C00A53761 /* GlucoseViewController.m */,
 				D04A32961B0A9B4E00933B2E /* ReviewViewController.h */,
 				D04A32971B0A9B4E00933B2E /* ReviewViewController.m */,
+				D08E73141B128FAE00ACD385 /* FoodViewController.h */,
+				D08E73151B128FAE00ACD385 /* FoodViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -362,6 +367,7 @@
 				D0E1FDC21B0E7BB5005301A4 /* GraphView.m in Sources */,
 				D01111C21B10ED7B00A53761 /* InsulinViewController.m in Sources */,
 				D215BC4E1B0FE7D40006BBDE /* MainViewController.m in Sources */,
+				D08E73161B128FAE00ACD385 /* FoodViewController.m in Sources */,
 				D01111BF1B10039C00A53761 /* GlucoseViewController.m in Sources */,
 				D04A328F1B0A9B4E00933B2E /* main.m in Sources */,
 				D04A32981B0A9B4E00933B2E /* ReviewViewController.m in Sources */,
