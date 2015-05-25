@@ -15,5 +15,7 @@
 + (void)setUpAppearance {
     [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:252.0/255.0 green:32.0/255.0 blue:28.0/255.0 alpha:1]];
     [[UITabBar appearance] setTintColor:[UIColor colorWithRed:252.0/255.0 green:32.0/255.0 blue:28.0/255.0 alpha:1]];
+    
+    [[UIBarButtonItem appearance] setTintColor:[UIColor colorWithRed:252.0/255.0 green:32.0/255.0 blue:28.0/255.0 alpha:1]];
 }
 @end
