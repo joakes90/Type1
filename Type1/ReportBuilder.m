@@ -38,7 +38,10 @@
     [[HealthKitController sharedInstance] proteinStatusQuereyforNumberOfWeeks:number];
     [[HealthKitController sharedInstance] fatStatusQuereyforNumberOfWeeks:number];
     
+    
+    
     [self addInjectionDataForWeeks:number];
+    [self performSelector:@selector(addGlucoseDataForWeeks) withObject:nil afterDelay:0.75];
 }
 
 
@@ -49,7 +52,18 @@
         NSString *dateString = [NSDateFormatter localizedStringFromDate:injection.time dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterShortStyle];
         NSString *newString = [NSString stringWithFormat:@"<li> On %@ I injected %@ Units of %@ </li> \n",dateString, injection.units, injection.type];
         [self.HTMLString stringByAppendingString:newString];
-        NSLog(@"%@",newString);
+        
+        //replace with building the string
+//        NSLog(@"%@",newString);
+    }
+}
+
+- (void)addGlucoseDataForWeeks {
+    NSArray *glucoseData = [[HealthKitController sharedInstance] grabGlucose];
+    for (HKStatistics *stat in glucoseData) {
+        if (stat.averageQuantity) {
+            NSLog(@"%@", stat.averageQuantity);
+        }
     }
 }
 

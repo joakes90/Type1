@@ -132,6 +132,7 @@
     NSDate *anchorDate = [NSDate dateWithTimeIntervalSinceNow:-86400 * (weeks * 7)];
     NSDateComponents *days = [[NSDateComponents alloc] init];
     days.day = 1;
+    NSMutableArray *resultsArray = [[NSMutableArray alloc] init];
     
     HKStatisticsCollectionQuery *glucoseQuery = [[HKStatisticsCollectionQuery alloc] initWithQuantityType:glucoseType
                                                                                   quantitySamplePredicate:nil
@@ -144,7 +145,6 @@
             NSLog(@"Error occured");
             abort();
         } else {
-            NSMutableArray *resultsArray = [[NSMutableArray alloc] init];
             
             [results enumerateStatisticsFromDate:anchorDate toDate:[NSDate new] withBlock:^(HKStatistics *result, BOOL *stop) {
                 [resultsArray addObject:result];
