@@ -25,8 +25,6 @@
     [super viewDidLoad];
     self.data = [[NSMutableArray alloc] init];
     self.xAxis = [[NSMutableArray alloc] init];
-    
-    [[HealthKitController sharedInstance] allGlucoseNumbersForToday];
 
 
     self.GraphView.backgroundColor = [UIColor darkGrayColor];
@@ -43,6 +41,8 @@
 -(void)viewWillAppear:(BOOL)animated {
     self.data = [[NSMutableArray alloc] init];
     self.xAxis = [[NSMutableArray alloc] init];
+    
+    [[HealthKitController sharedInstance] allGlucoseNumbersForToday];
     [self performSelector:@selector(updateGraph) withObject:nil afterDelay:0.75];
 }
 
