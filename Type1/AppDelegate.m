@@ -8,11 +8,8 @@
 
 #import "AppDelegate.h"
 
-#import "Stack.h"
-#import "Injection.h"
-#import "HealthKitController.h"
+#import "AppearanceCotroller.h"
 
-@import HealthKit;
 
 @interface AppDelegate ()
 
@@ -24,7 +21,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
         
-    
+    [AppearanceCotroller setUpAppearance];
     return YES;
 }
 
