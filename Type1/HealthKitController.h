@@ -34,7 +34,7 @@
 
 //GENERATE NSARRAYS OF HKSTATISTICS FOR WEEKS SPLIT BY DAYS
 
--(void)GlucoseStatsQuereyforNumberofWeeks:(int)weeks;
+-(NSArray *)GlucoseStatsQuereyforNumberofWeeks:(int)weeks;
 
 -(void)fatStatusQuereyforNumberOfWeeks:(int)weeks;
 

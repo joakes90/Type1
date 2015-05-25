@@ -22,6 +22,7 @@
 		D07DA1311B12A64900A88124 /* AppearanceCotroller.m in Sources */ = {isa = PBXBuildFile; fileRef = D07DA1301B12A64900A88124 /* AppearanceCotroller.m */; };
 		D08E73161B128FAE00ACD385 /* FoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D08E73151B128FAE00ACD385 /* FoodViewController.m */; };
 		D0B846CE1B12AD53009B97E6 /* ResourceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B846CD1B12AD53009B97E6 /* ResourceViewController.m */; };
+		D0C3BDF21B1372ED0015E63C /* ReportBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C3BDF11B1372ED0015E63C /* ReportBuilder.m */; };
 		D0E1FDC21B0E7BB5005301A4 /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E1FDC11B0E7BB5005301A4 /* GraphView.m */; };
 		D0F730D21B0BD71C00968517 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F730D11B0BD71C00968517 /* CoreData.framework */; };
 		D0F730D51B0BD79800968517 /* InsulinModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0F730D31B0BD79800968517 /* InsulinModel.xcdatamodeld */; };
@@ -70,6 +71,8 @@
 		D08E73151B128FAE00ACD385 /* FoodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodViewController.m; sourceTree = "<group>"; };
 		D0B846CC1B12AD53009B97E6 /* ResourceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceViewController.h; sourceTree = "<group>"; };
 		D0B846CD1B12AD53009B97E6 /* ResourceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResourceViewController.m; sourceTree = "<group>"; };
+		D0C3BDF01B1372ED0015E63C /* ReportBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportBuilder.h; sourceTree = "<group>"; };
+		D0C3BDF11B1372ED0015E63C /* ReportBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportBuilder.m; sourceTree = "<group>"; };
 		D0E1FDC01B0E7BB5005301A4 /* GraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphView.h; sourceTree = "<group>"; };
 		D0E1FDC11B0E7BB5005301A4 /* GraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphView.m; sourceTree = "<group>"; };
 		D0F730D11B0BD71C00968517 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -210,6 +213,8 @@
 		D04A32B51B0A9FDF00933B2E /* Model Objects */ = {
 			isa = PBXGroup;
 			children = (
+				D0C3BDF01B1372ED0015E63C /* ReportBuilder.h */,
+				D0C3BDF11B1372ED0015E63C /* ReportBuilder.m */,
 				D0F730D61B0BD83D00968517 /* Injection.h */,
 				D0F730D71B0BD83D00968517 /* Injection.m */,
 				D0F730D31B0BD79800968517 /* InsulinModel.xcdatamodeld */,
@@ -381,6 +386,7 @@
 				D08E73161B128FAE00ACD385 /* FoodViewController.m in Sources */,
 				D01111BF1B10039C00A53761 /* GlucoseViewController.m in Sources */,
 				D04A328F1B0A9B4E00933B2E /* main.m in Sources */,
+				D0C3BDF21B1372ED0015E63C /* ReportBuilder.m in Sources */,
 				D04A32981B0A9B4E00933B2E /* ReviewViewController.m in Sources */,
 				D07DA1311B12A64900A88124 /* AppearanceCotroller.m in Sources */,
 				D0F730D51B0BD79800968517 /* InsulinModel.xcdatamodeld in Sources */,

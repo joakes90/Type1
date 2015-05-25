@@ -10,6 +10,8 @@
 #import "HealthKitController.h"
 #import "GraphView.h"
 
+#import "ReportBuilder.h"
+
 @interface ReviewViewController () <JBLineChartViewDataSource, JBLineChartViewDelegate>
 @property (strong, nonatomic) IBOutlet GraphView *GraphView;
 @property (strong, nonatomic) IBOutlet UILabel *infoLabel;
@@ -39,6 +41,11 @@
     }
 
 -(void)viewWillAppear:(BOOL)animated {
+    //remove later
+    [[ReportBuilder sharedInstance] buildStringForNumberOfWeeks:2];
+    
+    //keep
+    
     self.data = [[NSMutableArray alloc] init];
     self.xAxis = [[NSMutableArray alloc] init];
     
