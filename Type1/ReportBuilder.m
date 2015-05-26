@@ -12,9 +12,9 @@
 
 @interface ReportBuilder ()
 
-@property NSString *HTMLString;
+@property (strong, nonatomic) NSString *HTMLString;
 
-@property NSArray *glucoseArray;
+@property (assign, nonatomic) float numberOfWeeks;
 
 @end
 
@@ -26,13 +26,15 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedInstance = [[ReportBuilder alloc] init];
-        sharedInstance.HTMLString = [NSString stringWithFormat:@"<html> \n <body>"];
+        
     });
     return sharedInstance;
 }
 
 
 - (void) buildStringForNumberOfWeeks:(float)number {
+    self.numberOfWeeks = number;
+    self.HTMLString = [NSString stringWithFormat:@"<html> \n <body> \n <h1> Diabetis Report </h1> <br> <h2> Powered by Type 1 </h2> <br>"];
     [[HealthKitController sharedInstance] GlucoseStatsQuereyforNumberofWeeks:number];
     [[HealthKitController sharedInstance] carbStatusQuereyforNumberOfWeeks:number];
     [[HealthKitController sharedInstance] proteinStatusQuereyforNumberOfWeeks:number];
@@ -40,32 +42,96 @@
     
     
     
-    [self addInjectionDataForWeeks:number];
-    [self performSelector:@selector(addGlucoseDataForWeeks) withObject:nil afterDelay:0.75];
-}
-
-
-- (void)addInjectionDataForWeeks:(float)number {
-   NSArray *injectionArray = [[HealthKitController sharedInstance] numberOfinjectionsperDayforNumberOfWeeks:number];
     
-    for (Injection *injection in injectionArray) {
-        NSString *dateString = [NSDateFormatter localizedStringFromDate:injection.time dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterShortStyle];
-        NSString *newString = [NSString stringWithFormat:@"<li> On %@ I injected %@ Units of %@ </li> \n",dateString, injection.units, injection.type];
-        [self.HTMLString stringByAppendingString:newString];
-        
-        //replace with building the string
-//        NSLog(@"%@",newString);
-    }
+    [self performSelector:@selector(addGlucoseDataForWeeks) withObject:nil afterDelay:0.5];
+    [self performSelector:@selector(addInjectionDataForWeeks) withObject:nil afterDelay:0.55];
+    [self performSelector:@selector(addCarbsDataForWeeks) withObject:nil afterDelay:0.6];
+    [self performSelector:@selector(addProteinDataForWeeks) withObject:nil afterDelay:0.65];
+    [self performSelector:@selector(addFatDataForWeeks) withObject:nil afterDelay:0.7];
+    
+    //remove after testing
+    [self performSelector:@selector(grabHTML) withObject:nil afterDelay:0.75];
 }
+
 
 - (void)addGlucoseDataForWeeks {
+   self.HTMLString = self.HTMLString = [self.HTMLString stringByAppendingString:@"<h3>Blood Suger Data</h3> <br> \n <ul>"];
     NSArray *glucoseData = [[HealthKitController sharedInstance] grabGlucose];
     for (HKStatistics *stat in glucoseData) {
         if (stat.averageQuantity) {
-            NSLog(@"%@", stat.averageQuantity);
+            NSString *dateString = [NSDateFormatter localizedStringFromDate:stat.startDate dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterNoStyle];
+            NSString *newString = [NSString stringWithFormat:@"<li> Average blood glucose on %@ was %@ </li> \n", dateString, stat.averageQuantity];
+            self.HTMLString = [self.HTMLString stringByAppendingString:newString];
+            //replace with building the string
+//            NSLog(@"%@", newString);
         }
     }
+  self.HTMLString =  [self.HTMLString stringByAppendingString:@"</ul> \n"];
 }
 
+- (void)addInjectionDataForWeeks {
+   self.HTMLString = [self.HTMLString stringByAppendingString:@"<h3>Insulin Data</h3> <br> \n <ul>"];
+    
+    NSArray *injectionArray = [[HealthKitController sharedInstance] numberOfinjectionsperDayforNumberOfWeeks:self.numberOfWeeks];
+    
+    for (Injection *injection in injectionArray) {
+        NSString *dateString = [NSDateFormatter localizedStringFromDate:injection.time dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterNoStyle];
+        NSString *newString = [NSString stringWithFormat:@"<li> On %@ I injected %@ Units of %@ </li> \n",dateString, injection.units, injection.type];
+       self.HTMLString = [self.HTMLString stringByAppendingString:newString];
+        
+        //replace with building the string
+        //        NSLog(@"%@",newString);
+    }
+   self.HTMLString = [self.HTMLString stringByAppendingString:@"</ul> \n"];
+}
+
+- (void)addCarbsDataForWeeks {
+  self.HTMLString = [self.HTMLString stringByAppendingString:@"<h3>Carb Data</h3> <br> \n <ul>"];
+    NSArray *carbData = [[HealthKitController sharedInstance] grabCarbs];
+    for (HKStatistics *stat in carbData) {
+        if (stat.sumQuantity) {
+            NSString *dateString = [NSDateFormatter localizedStringFromDate:stat.startDate dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterShortStyle];
+            NSString *newString = [NSString stringWithFormat:@"<li> On %@ my total carb intake was %@ </li> \n", dateString, stat.sumQuantity];
+            self.HTMLString = [self.HTMLString stringByAppendingString:newString];
+            
+            //replace with building the string
+        }
+    }
+   self.HTMLString = [self.HTMLString stringByAppendingString:@"</ul> \n"];
+}
+
+- (void)addProteinDataForWeeks {
+    self.HTMLString = [self.HTMLString stringByAppendingString:@"<h3>Protein Data</h3> <br> \n <ul>"];
+    NSArray *proteinData = [[HealthKitController sharedInstance] grabProtein];
+    for (HKStatistics *stat in proteinData) {
+        if (stat.sumQuantity) {
+            NSString *dateString = [NSDateFormatter localizedStringFromDate:stat.startDate dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterShortStyle];
+            NSString *newString = [NSString stringWithFormat:@"<li> On %@ my total protein intake was %@ </li> \n", dateString, stat.sumQuantity];
+           self.HTMLString = [self.HTMLString stringByAppendingString:newString];
+            
+            //build the string
+        }
+    }
+    self.HTMLString = [self.HTMLString stringByAppendingString:@"</ul> \n"];
+}
+
+- (void)addFatDataForWeeks {
+    self.HTMLString =[self.HTMLString stringByAppendingString:@"<h3>Fat Data</h3> <br> \n <ul>"];
+    NSArray *fatData = [[HealthKitController sharedInstance] grabFat];
+    for (HKStatistics *stat in fatData) {
+        if (stat.sumQuantity) {
+            NSString *dateString = [NSDateFormatter localizedStringFromDate:stat.startDate dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterShortStyle];
+            NSString *newString = [NSString stringWithFormat:@"<li> On %@ my total fat intake was %@ </li> \n", dateString, stat.sumQuantity];
+           self.HTMLString = [self.HTMLString stringByAppendingString:newString];
+            
+            //build the String
+        }
+    }
+    self.HTMLString = [self.HTMLString stringByAppendingString:@"</ul> \n </body> </html>"];
+}
+
+- (void) grabHTML {
+    NSLog(@"%@", self.HTMLString);
+}
 
 @end
