@@ -34,7 +34,7 @@
 
 - (void) buildStringForNumberOfWeeks:(float)number {
     self.numberOfWeeks = number;
-    self.HTMLString = [NSString stringWithFormat:@"<html> \n <body> \n <h1> Diabetis Report </h1>  <h2> Powered by Type 1 </h2> "];
+    self.HTMLString = [NSString stringWithFormat:@"<html> \n <body> \n <h1> Diabetes Report </h1>  <h2> Powered by Type 1 </h2> "];
     [[HealthKitController sharedInstance] GlucoseStatsQuereyforNumberofWeeks:number];
     [[HealthKitController sharedInstance] carbStatusQuereyforNumberOfWeeks:number];
     [[HealthKitController sharedInstance] proteinStatusQuereyforNumberOfWeeks:number];

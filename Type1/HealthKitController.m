@@ -7,6 +7,7 @@
 //
 
 #import "HealthKitController.h"
+@import UIKit;
 
 @interface HealthKitController ()
 
@@ -39,7 +40,39 @@
 
 -(BOOL) requestHKPermission {
     if ([HKHealthStore isHealthDataAvailable]) {
-    
+        BOOL notFirstRun = [[NSUserDefaults standardUserDefaults] boolForKey:@"notFirstRun"];
+        if (!notFirstRun) {
+            
+        
+        
+        UIAlertController *permission = [UIAlertController alertControllerWithTitle:@"Health Kit" message:@"This app uses HealthKit to securely save and retrieve your health information. Please grant this app access to HealthKit to be able to utilize it's features " preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *ok = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                [self presentHKPermission];
+            }];
+        [permission addAction:ok];
+        
+        [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:permission animated:YES completion:^{
+            
+        }];
+            [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"notFirstRun"];
+        }
+        return YES;
+    } else {
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"HealthKit not available" message:@"Health Kit is not available on this device. Please install Type 1 an an iPhone running iOS 8.0 or later" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *ok = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            
+        }];
+        
+        [alertController addAction:ok];
+        
+        [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alertController animated:YES completion:^{
+            
+        }];
+        return NO;
+    }
+}
+
+- (void)presentHKPermission {
     NSSet *typesToUse = [NSSet setWithArray:@[[HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierBloodGlucose],
                                               [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierDietaryFatTotal],
                                               [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierDietaryProtein],
@@ -49,10 +82,7 @@
     [_HealthStore requestAuthorizationToShareTypes:typesToUse readTypes:typesToUse completion:^(BOOL success, NSError *error) {
         
     }];
-        return YES;
-    } else {
-        return NO;
-    }
+
 }
 
 -(void)saveGlucoseLevelsWithFloat:(float)number{

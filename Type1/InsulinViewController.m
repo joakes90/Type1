@@ -36,6 +36,7 @@
 }
 
 - (IBAction)save:(id)sender {
+    [[HealthKitController sharedInstance] requestHKPermission];
     float qunatity = [self.TextField.text doubleValue];
     NSString *type;
     if (self.TypeSegment.selectedSegmentIndex == 0) {
