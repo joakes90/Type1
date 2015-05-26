@@ -178,4 +178,11 @@
         
     }];
 }
+
+-(void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error{
+    [self resignFirstResponder];
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+    }];
+}
 @end

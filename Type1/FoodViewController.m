@@ -47,6 +47,8 @@
     [[HealthKitController sharedInstance] saveGramsOfCarbsWithFloat:[self.CarbTextField.text doubleValue]];
     [[HealthKitController sharedInstance] saveGramsOfProteinWithFloat:[self.ProteinTextField.text doubleValue]];
     [[HealthKitController sharedInstance] saveGramsOfFatWithFloat:[self.FatTextField.text doubleValue]];
+    
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 - (IBAction)viewTapped:(id)sender {

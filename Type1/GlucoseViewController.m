@@ -30,6 +30,7 @@
     float currentLevel = [self.TextField.text floatValue];
     
     [[HealthKitController sharedInstance] saveGlucoseLevelsWithFloat:currentLevel];
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 - (IBAction)screenTapped:(id)sender {

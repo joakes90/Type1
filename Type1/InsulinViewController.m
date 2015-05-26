@@ -46,6 +46,7 @@
     }
     
     [[HealthKitController sharedInstance] saveUnitsOfInsulinInjected:qunatity andType:type];
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 @end
