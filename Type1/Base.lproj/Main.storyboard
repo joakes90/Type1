@@ -509,10 +509,17 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gBN-lA-XU4">
+                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gBN-lA-XU4">
                                 <rect key="frame" x="0.0" y="350" width="600" height="201"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKv-bL-eGF">
+                                <rect key="frame" x="547" y="33" width="37" height="30"/>
+                                <state key="normal" title="email"/>
+                                <connections>
+                                    <action selector="emailDr:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="GtY-Iu-Mss"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -521,8 +528,10 @@
                             <constraint firstItem="W0N-14-zRc" firstAttribute="top" secondItem="T6M-Ym-4XF" secondAttribute="bottom" id="6Pv-rH-gdt"/>
                             <constraint firstItem="T6M-Ym-4XF" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="7jQ-ze-182"/>
                             <constraint firstItem="gBN-lA-XU4" firstAttribute="top" secondItem="W0N-14-zRc" secondAttribute="bottom" id="8FT-Sm-nq8"/>
+                            <constraint firstItem="MKv-bL-eGF" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="8Pe-5z-pCT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="T6M-Ym-4XF" secondAttribute="trailing" constant="-16" id="8Vt-wJ-6Zu"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="gBN-lA-XU4" secondAttribute="bottom" id="EHe-Xt-QOM"/>
+                            <constraint firstItem="MKv-bL-eGF" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="13" id="HKA-pa-Z5J"/>
                             <constraint firstItem="W0N-14-zRc" firstAttribute="top" secondItem="m15-FY-a1U" secondAttribute="bottom" constant="3" id="KxG-PJ-2wv"/>
                             <constraint firstItem="gBN-lA-XU4" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="N7I-E8-H72"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gBN-lA-XU4" secondAttribute="trailing" constant="-16" id="RcX-br-KSH"/>
@@ -543,6 +552,8 @@
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Review Data" id="cMs-Qd-t8M"/>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="GraphView" destination="W0N-14-zRc" id="OWe-5y-tdB"/>
                         <outlet property="infoLabel" destination="T6M-Ym-4XF" id="TBi-mN-Ubt"/>
@@ -551,7 +562,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="383" y="152"/>
+            <point key="canvasLocation" x="383" y="238"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="nQK-Je-QtV">

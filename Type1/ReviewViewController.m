@@ -11,6 +11,8 @@
 #import "GraphView.h"
 #import "ReportBuilder.h"
 
+@import MessageUI;
+
 @interface ReviewViewController () <JBLineChartViewDataSource, JBLineChartViewDelegate>
 @property (strong, nonatomic) IBOutlet GraphView *GraphView;
 @property (strong, nonatomic) IBOutlet UILabel *infoLabel;
@@ -19,6 +21,8 @@
 
 @property (strong, nonatomic) NSMutableArray *xAxis;
 @property (strong, nonatomic) NSMutableArray *data;
+
+@property (strong, nonatomic) NSString *MessageString;
 @end
 
 @implementation ReviewViewController
@@ -135,5 +139,43 @@
 
 -(void)didDeselectLineInLineChartView:(JBLineChartView *)lineChartView {
     self.infoLabel.text = @"";
+}
+
+- (IBAction)emailDr:(id)sender {
+    UIAlertController *emailRequest = [UIAlertController alertControllerWithTitle:@"Email report to your Doctor" message:@"Enter the number of weeks you would like to generate a report for" preferredStyle:UIAlertControllerStyleAlert];
+    [emailRequest addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+        textField.keyboardType = UIKeyboardTypeNumberPad;
+        textField.text = @"2";
+    }];
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+        
+    }];
+    UIAlertAction *Submit = [UIAlertAction actionWithTitle:@"Submit" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        UITextField *textField = emailRequest.textFields[0];
+        
+        [[ReportBuilder sharedInstance] buildStringForNumberOfWeeks:[textField.text doubleValue]];
+        [self performSelector:@selector(grabHTML) withObject:nil afterDelay:0.75];
+        
+        
+    }];
+    
+    [emailRequest addAction:cancel];
+    [emailRequest addAction:Submit];
+    
+    [self presentViewController:emailRequest animated:YES completion:^{
+        
+    }];
+}
+
+-(void)grabHTML {
+    self.MessageString = [[ReportBuilder sharedInstance] grabHTML];
+    MFMailComposeViewController *composer = [MFMailComposeViewController new];
+    composer.mailComposeDelegate = self;
+    [composer setSubject:[NSString stringWithFormat:@"Type 1 report %@", [NSDateFormatter localizedStringFromDate:[NSDate new] dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterNoStyle]]];
+    [composer setMessageBody:self.MessageString isHTML:YES];
+    
+    [self presentViewController:composer animated:YES completion:^{
+        
+    }];
 }
 @end

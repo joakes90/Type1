@@ -19,6 +19,7 @@
 		D04A32AC1B0A9B4E00933B2E /* Type1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = D04A32AB1B0A9B4E00933B2E /* Type1Tests.m */; };
 		D04A32B81B0AA09300933B2E /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04A32B71B0AA09300933B2E /* HealthKit.framework */; };
 		D04A32BB1B0AA0D800933B2E /* HealthKitController.m in Sources */ = {isa = PBXBuildFile; fileRef = D04A32BA1B0AA0D800933B2E /* HealthKitController.m */; };
+		D06DD4961B142ACC00039051 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D06DD4951B142ACC00039051 /* MessageUI.framework */; };
 		D07DA1311B12A64900A88124 /* AppearanceCotroller.m in Sources */ = {isa = PBXBuildFile; fileRef = D07DA1301B12A64900A88124 /* AppearanceCotroller.m */; };
 		D08E73161B128FAE00ACD385 /* FoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D08E73151B128FAE00ACD385 /* FoodViewController.m */; };
 		D0B846CE1B12AD53009B97E6 /* ResourceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B846CD1B12AD53009B97E6 /* ResourceViewController.m */; };
@@ -65,6 +66,7 @@
 		D04A32B71B0AA09300933B2E /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		D04A32B91B0AA0D800933B2E /* HealthKitController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthKitController.h; sourceTree = "<group>"; };
 		D04A32BA1B0AA0D800933B2E /* HealthKitController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthKitController.m; sourceTree = "<group>"; };
+		D06DD4951B142ACC00039051 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		D07DA12F1B12A64900A88124 /* AppearanceCotroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppearanceCotroller.h; sourceTree = "<group>"; };
 		D07DA1301B12A64900A88124 /* AppearanceCotroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppearanceCotroller.m; sourceTree = "<group>"; };
 		D08E73141B128FAE00ACD385 /* FoodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodViewController.h; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D06DD4961B142ACC00039051 /* MessageUI.framework in Frameworks */,
 				D0F730D21B0BD71C00968517 /* CoreData.framework in Frameworks */,
 				D04A32B81B0AA09300933B2E /* HealthKit.framework in Frameworks */,
 				14B46B33C082EBA7934AE0C4 /* libPods-Type1.a in Frameworks */,
@@ -110,6 +113,7 @@
 		2BEA598C4C4408126C78ECF9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D06DD4951B142ACC00039051 /* MessageUI.framework */,
 				B3C78CD2F10257C5CF70C062 /* libPods-Type1.a */,
 			);
 			name = Frameworks;
