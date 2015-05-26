@@ -74,9 +74,12 @@
                                     <action selector="save:" destination="7ZM-uY-hNK" eventType="touchUpInside" id="f5A-12-HwY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y8N-EP-Ozh">
-                                <rect key="frame" x="523" y="28" width="61" height="30"/>
-                                <state key="normal" title="popback">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y8N-EP-Ozh">
+                                <rect key="frame" x="556" y="28" width="28" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="28" id="Uxb-9O-Qdt"/>
+                                </constraints>
+                                <state key="normal" title="popback" image="popback">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -205,7 +208,7 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="VEy-la-rWC">
-                        <barButtonItem key="rightBarButtonItem" title="schedual" id="J6a-wU-DxO">
+                        <barButtonItem key="rightBarButtonItem" image="schedual" id="J6a-wU-DxO">
                             <connections>
                                 <segue destination="Nlp-bC-glV" kind="presentation" id="Cf4-cG-Foa"/>
                             </connections>
@@ -651,9 +654,12 @@
                                 <rect key="frame" x="0.0" y="350" width="600" height="206"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKv-bL-eGF">
-                                <rect key="frame" x="547" y="33" width="37" height="30"/>
-                                <state key="normal" title="email"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKv-bL-eGF">
+                                <rect key="frame" x="559" y="33" width="25" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="RKb-Ne-NcE"/>
+                                </constraints>
+                                <state key="normal" title="email" image="mail"/>
                                 <connections>
                                     <action selector="emailDr:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="GtY-Iu-Mss"/>
                                 </connections>
@@ -745,6 +751,9 @@
         <image name="back" width="22" height="22"/>
         <image name="enterdata" width="22" height="22"/>
         <image name="forwards" width="22" height="22"/>
+        <image name="mail" width="22" height="22"/>
+        <image name="popback" width="22" height="22"/>
         <image name="readdata" width="22" height="22"/>
+        <image name="schedual" width="22" height="22"/>
     </resources>
 </document>
