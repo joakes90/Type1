@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		14B46B33C082EBA7934AE0C4 /* libPods-Type1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3C78CD2F10257C5CF70C062 /* libPods-Type1.a */; };
+		D0105CDA1B1447A0008DF600 /* RemindersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0105CD91B1447A0008DF600 /* RemindersViewController.m */; };
 		D01111BF1B10039C00A53761 /* GlucoseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01111BE1B10039C00A53761 /* GlucoseViewController.m */; };
 		D01111C21B10ED7B00A53761 /* InsulinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01111C11B10ED7B00A53761 /* InsulinViewController.m */; };
 		D04A328F1B0A9B4E00933B2E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D04A328E1B0A9B4E00933B2E /* main.m */; };
@@ -45,6 +46,8 @@
 /* Begin PBXFileReference section */
 		B299A75FDDC692021ECDBEAD /* Pods-Type1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Type1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Type1/Pods-Type1.debug.xcconfig"; sourceTree = "<group>"; };
 		B3C78CD2F10257C5CF70C062 /* libPods-Type1.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Type1.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0105CD81B1447A0008DF600 /* RemindersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemindersViewController.h; sourceTree = "<group>"; };
+		D0105CD91B1447A0008DF600 /* RemindersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemindersViewController.m; sourceTree = "<group>"; };
 		D01111BD1B10039C00A53761 /* GlucoseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlucoseViewController.h; sourceTree = "<group>"; };
 		D01111BE1B10039C00A53761 /* GlucoseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlucoseViewController.m; sourceTree = "<group>"; };
 		D01111C01B10ED7B00A53761 /* InsulinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InsulinViewController.h; sourceTree = "<group>"; };
@@ -143,6 +146,8 @@
 				D04A32971B0A9B4E00933B2E /* ReviewViewController.m */,
 				D08E73141B128FAE00ACD385 /* FoodViewController.h */,
 				D08E73151B128FAE00ACD385 /* FoodViewController.m */,
+				D0105CD81B1447A0008DF600 /* RemindersViewController.h */,
+				D0105CD91B1447A0008DF600 /* RemindersViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -392,6 +397,7 @@
 				D04A328F1B0A9B4E00933B2E /* main.m in Sources */,
 				D0C3BDF21B1372ED0015E63C /* ReportBuilder.m in Sources */,
 				D04A32981B0A9B4E00933B2E /* ReviewViewController.m in Sources */,
+				D0105CDA1B1447A0008DF600 /* RemindersViewController.m in Sources */,
 				D07DA1311B12A64900A88124 /* AppearanceCotroller.m in Sources */,
 				D0F730D51B0BD79800968517 /* InsulinModel.xcdatamodeld in Sources */,
 				D04A32BB1B0AA0D800933B2E /* HealthKitController.m in Sources */,

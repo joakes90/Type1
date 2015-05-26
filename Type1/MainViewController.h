@@ -10,4 +10,6 @@
 
 @interface MainViewController : UIViewController
 
+- (IBAction)unwindToMainMenu:(UIStoryboardSegue*)sender;
+
 @end

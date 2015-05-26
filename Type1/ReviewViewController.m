@@ -13,7 +13,7 @@
 
 @import MessageUI;
 
-@interface ReviewViewController () <JBLineChartViewDataSource, JBLineChartViewDelegate>
+@interface ReviewViewController () <JBLineChartViewDataSource, JBLineChartViewDelegate,MFMailComposeViewControllerDelegate>
 @property (strong, nonatomic) IBOutlet GraphView *GraphView;
 @property (strong, nonatomic) IBOutlet UILabel *infoLabel;
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
