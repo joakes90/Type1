@@ -173,7 +173,7 @@
     glucoseQuery.initialResultsHandler = ^(HKStatisticsCollectionQuery *query, HKStatisticsCollection *results, NSError *error) {
         if (error) {
             NSLog(@"Error occured");
-            abort();
+//            abort();
         } else {
             
             [results enumerateStatisticsFromDate:anchorDate toDate:[NSDate new] withBlock:^(HKStatistics *result, BOOL *stop) {
@@ -207,7 +207,7 @@
     fatQuerey.initialResultsHandler = ^(HKStatisticsCollectionQuery *query, HKStatisticsCollection *results, NSError *error) {
         if (error) {
             NSLog(@"Error occured");
-            abort();
+//            abort();
         } else {
             NSMutableArray *resultsArray = [[NSMutableArray alloc] init];
             
@@ -239,7 +239,7 @@
     proteinQuerey.initialResultsHandler = ^(HKStatisticsCollectionQuery *query, HKStatisticsCollection *results, NSError *error) {
         if (error) {
             NSLog(@"Error occured");
-            abort();
+//            abort();
         } else {
             NSMutableArray *resultsArray = [[NSMutableArray alloc] init];
             
@@ -268,7 +268,7 @@
     carbsQuerey.initialResultsHandler = ^(HKStatisticsCollectionQuery *query, HKStatisticsCollection *results, NSError *error) {
         if (error) {
             NSLog(@"Error occured");
-            abort();
+//            abort();
         } else {
             NSMutableArray *resultsArray = [[NSMutableArray alloc] init];
             

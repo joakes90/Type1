@@ -689,7 +689,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Review Data" id="cMs-Qd-t8M"/>
+                    <tabBarItem key="tabBarItem" title="Review Data" image="readdata" id="cMs-Qd-t8M"/>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -725,7 +725,7 @@
         <scene sceneID="DJD-ou-hdo">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SaQ-we-Wt5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Enter Data" id="nsK-WX-I84"/>
+                    <tabBarItem key="tabBarItem" title="Enter Data" image="enterdata" id="nsK-WX-I84"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="l9w-tg-vtB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -743,6 +743,8 @@
     </scenes>
     <resources>
         <image name="back" width="22" height="22"/>
+        <image name="enterdata" width="22" height="22"/>
         <image name="forwards" width="22" height="22"/>
+        <image name="readdata" width="22" height="22"/>
     </resources>
 </document>
