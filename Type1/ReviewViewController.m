@@ -9,12 +9,12 @@
 #import "ReviewViewController.h"
 #import "HealthKitController.h"
 #import "GraphView.h"
-
 #import "ReportBuilder.h"
 
 @interface ReviewViewController () <JBLineChartViewDataSource, JBLineChartViewDelegate>
 @property (strong, nonatomic) IBOutlet GraphView *GraphView;
 @property (strong, nonatomic) IBOutlet UILabel *infoLabel;
+@property (strong, nonatomic) IBOutlet UIWebView *webView;
 
 
 @property (strong, nonatomic) NSMutableArray *xAxis;
@@ -41,16 +41,14 @@
     }
 
 -(void)viewWillAppear:(BOOL)animated {
-    //remove later
     [[ReportBuilder sharedInstance] buildStringForNumberOfWeeks:2];
-    
-    //keep
     
     self.data = [[NSMutableArray alloc] init];
     self.xAxis = [[NSMutableArray alloc] init];
     
     [[HealthKitController sharedInstance] allGlucoseNumbersForToday];
     [self performSelector:@selector(updateGraph) withObject:nil afterDelay:0.75];
+    [self performSelector:@selector(grabReport) withObject:nil afterDelay:0.75];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -81,6 +79,10 @@
 
 -(void)updateGraph {
     [self buildGraph];
+}
+-(void)grabReport{
+    NSString *reportString =[[ReportBuilder sharedInstance] grabHTML];
+    [self.webView loadHTMLString:reportString baseURL:nil];
 }
 
 #pragma mark - Requiered JBLineGraph methods

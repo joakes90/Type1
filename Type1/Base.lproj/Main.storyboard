@@ -509,6 +509,10 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gBN-lA-XU4">
+                                <rect key="frame" x="0.0" y="350" width="600" height="201"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -516,8 +520,12 @@
                             <constraint firstItem="T6M-Ym-4XF" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="2f7-4A-lYA"/>
                             <constraint firstItem="W0N-14-zRc" firstAttribute="top" secondItem="T6M-Ym-4XF" secondAttribute="bottom" id="6Pv-rH-gdt"/>
                             <constraint firstItem="T6M-Ym-4XF" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="7jQ-ze-182"/>
+                            <constraint firstItem="gBN-lA-XU4" firstAttribute="top" secondItem="W0N-14-zRc" secondAttribute="bottom" id="8FT-Sm-nq8"/>
                             <constraint firstAttribute="trailingMargin" secondItem="T6M-Ym-4XF" secondAttribute="trailing" constant="-16" id="8Vt-wJ-6Zu"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="gBN-lA-XU4" secondAttribute="bottom" id="EHe-Xt-QOM"/>
                             <constraint firstItem="W0N-14-zRc" firstAttribute="top" secondItem="m15-FY-a1U" secondAttribute="bottom" constant="3" id="KxG-PJ-2wv"/>
+                            <constraint firstItem="gBN-lA-XU4" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="N7I-E8-H72"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gBN-lA-XU4" secondAttribute="trailing" constant="-16" id="RcX-br-KSH"/>
                             <constraint firstAttribute="centerX" secondItem="m15-FY-a1U" secondAttribute="centerX" constant="1" id="SN5-dc-M0Z"/>
                             <constraint firstItem="T6M-Ym-4XF" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="SzN-ga-Iof"/>
                             <constraint firstItem="T6M-Ym-4XF" firstAttribute="top" secondItem="m15-FY-a1U" secondAttribute="bottom" constant="8" id="TOb-fs-Hsu"/>
@@ -538,6 +546,7 @@
                     <connections>
                         <outlet property="GraphView" destination="W0N-14-zRc" id="OWe-5y-tdB"/>
                         <outlet property="infoLabel" destination="T6M-Ym-4XF" id="TBi-mN-Ubt"/>
+                        <outlet property="webView" destination="gBN-lA-XU4" id="Ht9-ax-dGs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

@@ -14,4 +14,6 @@
 
 - (void) buildStringForNumberOfWeeks:(float)number;
 
+- (NSString *) grabHTML;
+
 @end

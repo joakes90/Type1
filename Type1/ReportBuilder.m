@@ -34,7 +34,7 @@
 
 - (void) buildStringForNumberOfWeeks:(float)number {
     self.numberOfWeeks = number;
-    self.HTMLString = [NSString stringWithFormat:@"<html> \n <body> \n <h1> Diabetis Report </h1> <br> <h2> Powered by Type 1 </h2> <br>"];
+    self.HTMLString = [NSString stringWithFormat:@"<html> \n <body> \n <h1> Diabetis Report </h1>  <h2> Powered by Type 1 </h2> "];
     [[HealthKitController sharedInstance] GlucoseStatsQuereyforNumberofWeeks:number];
     [[HealthKitController sharedInstance] carbStatusQuereyforNumberOfWeeks:number];
     [[HealthKitController sharedInstance] proteinStatusQuereyforNumberOfWeeks:number];
@@ -49,13 +49,11 @@
     [self performSelector:@selector(addProteinDataForWeeks) withObject:nil afterDelay:0.65];
     [self performSelector:@selector(addFatDataForWeeks) withObject:nil afterDelay:0.7];
     
-    //remove after testing
-    [self performSelector:@selector(grabHTML) withObject:nil afterDelay:0.75];
 }
 
 
 - (void)addGlucoseDataForWeeks {
-   self.HTMLString = self.HTMLString = [self.HTMLString stringByAppendingString:@"<h3>Blood Suger Data</h3> <br> \n <ul>"];
+   self.HTMLString = self.HTMLString = [self.HTMLString stringByAppendingString:@"<h3>Blood Suger Data</h3>  \n <ul>"];
     NSArray *glucoseData = [[HealthKitController sharedInstance] grabGlucose];
     for (HKStatistics *stat in glucoseData) {
         if (stat.averageQuantity) {
@@ -70,7 +68,7 @@
 }
 
 - (void)addInjectionDataForWeeks {
-   self.HTMLString = [self.HTMLString stringByAppendingString:@"<h3>Insulin Data</h3> <br> \n <ul>"];
+   self.HTMLString = [self.HTMLString stringByAppendingString:@"<h3>Insulin Data</h3>  \n <ul>"];
     
     NSArray *injectionArray = [[HealthKitController sharedInstance] numberOfinjectionsperDayforNumberOfWeeks:self.numberOfWeeks];
     
@@ -86,7 +84,7 @@
 }
 
 - (void)addCarbsDataForWeeks {
-  self.HTMLString = [self.HTMLString stringByAppendingString:@"<h3>Carb Data</h3> <br> \n <ul>"];
+  self.HTMLString = [self.HTMLString stringByAppendingString:@"<h3>Carb Data</h3>  \n <ul>"];
     NSArray *carbData = [[HealthKitController sharedInstance] grabCarbs];
     for (HKStatistics *stat in carbData) {
         if (stat.sumQuantity) {
@@ -101,7 +99,7 @@
 }
 
 - (void)addProteinDataForWeeks {
-    self.HTMLString = [self.HTMLString stringByAppendingString:@"<h3>Protein Data</h3> <br> \n <ul>"];
+    self.HTMLString = [self.HTMLString stringByAppendingString:@"<h3>Protein Data</h3>  \n <ul>"];
     NSArray *proteinData = [[HealthKitController sharedInstance] grabProtein];
     for (HKStatistics *stat in proteinData) {
         if (stat.sumQuantity) {
@@ -116,7 +114,7 @@
 }
 
 - (void)addFatDataForWeeks {
-    self.HTMLString =[self.HTMLString stringByAppendingString:@"<h3>Fat Data</h3> <br> \n <ul>"];
+    self.HTMLString =[self.HTMLString stringByAppendingString:@"<h3>Fat Data</h3>  \n <ul>"];
     NSArray *fatData = [[HealthKitController sharedInstance] grabFat];
     for (HKStatistics *stat in fatData) {
         if (stat.sumQuantity) {
@@ -130,8 +128,8 @@
     self.HTMLString = [self.HTMLString stringByAppendingString:@"</ul> \n </body> </html>"];
 }
 
-- (void) grabHTML {
-    NSLog(@"%@", self.HTMLString);
+- (NSString *) grabHTML {
+    return self.HTMLString;
 }
 
 @end
