@@ -110,7 +110,7 @@
 
 -(UIColor *)lineChartView:(JBLineChartView *)lineChartView colorForLineAtLineIndex:(NSUInteger)lineIndex {
     
-    return [UIColor colorWithRed:96.0/255 green:140.0/255 blue:195.0/255 alpha:1];
+    return [UIColor colorWithRed:252.0/255.0 green:32.0/255.0 blue:28.0/255.0 alpha:1];
 }
 
 -(BOOL)lineChartView:(JBLineChartView *)lineChartView showsDotsForLineAtLineIndex:(NSUInteger)lineIndex {

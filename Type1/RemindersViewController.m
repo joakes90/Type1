@@ -58,6 +58,9 @@
 
 - (IBAction)clear:(id)sender {
     [[UIApplication sharedApplication] cancelAllLocalNotifications];
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+    }];
 }
 - (IBAction)screenTaped:(id)sender {
     [self.textField resignFirstResponder];
