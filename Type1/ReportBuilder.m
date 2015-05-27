@@ -88,7 +88,7 @@
     NSArray *carbData = [[HealthKitController sharedInstance] grabCarbs];
     for (HKStatistics *stat in carbData) {
         if (stat.sumQuantity) {
-            NSString *dateString = [NSDateFormatter localizedStringFromDate:stat.startDate dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterShortStyle];
+            NSString *dateString = [NSDateFormatter localizedStringFromDate:stat.startDate dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterNoStyle];
             NSString *newString = [NSString stringWithFormat:@"<li> On %@ my total carb intake was %@ </li> \n", dateString, stat.sumQuantity];
             self.HTMLString = [self.HTMLString stringByAppendingString:newString];
             
@@ -103,7 +103,7 @@
     NSArray *proteinData = [[HealthKitController sharedInstance] grabProtein];
     for (HKStatistics *stat in proteinData) {
         if (stat.sumQuantity) {
-            NSString *dateString = [NSDateFormatter localizedStringFromDate:stat.startDate dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterShortStyle];
+            NSString *dateString = [NSDateFormatter localizedStringFromDate:stat.startDate dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterNoStyle];
             NSString *newString = [NSString stringWithFormat:@"<li> On %@ my total protein intake was %@ </li> \n", dateString, stat.sumQuantity];
            self.HTMLString = [self.HTMLString stringByAppendingString:newString];
             
@@ -118,7 +118,7 @@
     NSArray *fatData = [[HealthKitController sharedInstance] grabFat];
     for (HKStatistics *stat in fatData) {
         if (stat.sumQuantity) {
-            NSString *dateString = [NSDateFormatter localizedStringFromDate:stat.startDate dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterShortStyle];
+            NSString *dateString = [NSDateFormatter localizedStringFromDate:stat.startDate dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterNoStyle];
             NSString *newString = [NSString stringWithFormat:@"<li> On %@ my total fat intake was %@ </li> \n", dateString, stat.sumQuantity];
            self.HTMLString = [self.HTMLString stringByAppendingString:newString];
             
