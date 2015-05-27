@@ -30,22 +30,29 @@
 
 - (IBAction)save:(id)sender {
     [[UIApplication sharedApplication] cancelAllLocalNotifications];
+    
     UIApplication *application = [UIApplication sharedApplication];
     [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
     
     
-    float frequency = 16.0 / [self.textField.text doubleValue];
-    frequency = frequency * 3600;
+    float hours = [self.textField.text doubleValue];
+    NSDate *lastFired = [NSDate new];
     
-    UILocalNotification *reminder = [[UILocalNotification alloc] init];
+    for (NSInteger time = 1; time <= 200; time++) {
+        NSDate *fireTime =[NSDate dateWithTimeInterval:3600 * hours sinceDate:lastFired];
+        
+        UILocalNotification *reminder = [[UILocalNotification alloc] init];
+        [reminder setFireDate:fireTime];
+        [reminder setAlertBody:[NSString stringWithFormat:@"Its been %.0f Hours since you last checked your blood sugar", hours]];
+        [reminder setSoundName:UILocalNotificationDefaultSoundName];
+        [[UIApplication sharedApplication] scheduleLocalNotification:reminder];
+        
+        lastFired = fireTime;
+    }
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+    }];
     
-    [reminder setFireDate:[NSDate dateWithTimeIntervalSinceNow:frequency]];
-    [reminder setRepeatInterval:NSCalendarUnitSecond];
-    
-    [reminder setAlertBody:[NSString stringWithFormat:@"Its been %.0f Hours since you last checked your blood sugar", 16 / [self.textField.text doubleValue]]];
-    [reminder setSoundName:UILocalNotificationDefaultSoundName];
-    
-    [[UIApplication sharedApplication] scheduleLocalNotification:reminder];
 }
 
 
