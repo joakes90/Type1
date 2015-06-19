@@ -53,7 +53,7 @@
 
 
 - (void)addGlucoseDataForWeeks {
-   self.HTMLString = self.HTMLString = [self.HTMLString stringByAppendingString:@"<h3>Blood Suger Data</h3>  \n <ul>"];
+   self.HTMLString = self.HTMLString = [self.HTMLString stringByAppendingString:@"<h3>Blood Sugar Data</h3>  \n <ul>"];
     NSArray *glucoseData = [[HealthKitController sharedInstance] grabGlucose];
     for (HKStatistics *stat in glucoseData) {
         if (stat.averageQuantity) {
